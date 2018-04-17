@@ -35,11 +35,6 @@ class Usuario
      * @ORM\Column(type="string", length=100)
      */
     private $password;
-    
-   /**
-     * @ORM\Column(type="string", length=100)
-     */
-    private $username;
 
     /**
      * @return mixed
@@ -47,14 +42,6 @@ class Usuario
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
     }
 
     /**
@@ -120,24 +107,5 @@ class Usuario
     {
         $this->password = $password;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getUsername()
-    {
-        return $this->username;
-    }
-
-    /**
-     * @param mixed $username
-     */
-    public function setUsername($username)
-    {
-        $this->username = $username;
-    }
-    
-    // add your own fields
-
 
 }
