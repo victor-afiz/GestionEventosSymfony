@@ -5,7 +5,7 @@ header("Access-Control-Allow-Origin: *");
 
 
 //use http\Env\Request;
-use function MongoDB\BSON\toJSON;
+
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -37,9 +37,11 @@ class UsuarioController extends Controller
 
         $entityManager->flush();
 
-        dump( $request);
-        //return new Response($request->query->get('name'));
-        return new JsonResponse($request->query->get('name'));
+        $repository = $this->getDoctrine()->getRepository(Usuario::class);
+        $user = $repository->findOneBy(['email' => $request->query->get('email')]);
+
+        dump($user);
+        return new JsonResponse([$user->getName(),$user->getId()]);
 
     }
 
