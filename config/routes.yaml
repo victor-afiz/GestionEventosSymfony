@@ -4,7 +4,7 @@
 news:
   path: /usuario/
   defaults: { _controller: 'App\Controller\UsuarioController::news' }
-  methods:  [GET]
+  methods:  [POST]
 
 loginUser:
   path: /login/
