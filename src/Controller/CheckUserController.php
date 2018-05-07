@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controller;
-
+header("Access-Control-Allow-Origin: *");
 use App\Entity\Usuario;
 use App\Repository\UsuarioRepository;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -23,14 +23,15 @@ class CheckUserController extends Controller
         $user = $repository->findOneBy(['email' => $email]);
 
         if (false === $user) {
-            return new Response('User not valid');
+            return new JsonResponse('User not valid');
         }
 
         if ($user->getEmail() === $email && $user->getPassword() === $password){
 
             $this->result = 'Welcome ';
-            dump($user);die;
+            dump($user);
             return new JsonResponse([$user->getName(), $user->getId()]);
+            die;
         }
         return new Response('Password not valid');
     }

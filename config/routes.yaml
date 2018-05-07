@@ -9,4 +9,4 @@ news:
 loginUser:
   path: /login/
   controller: 'App\Controller\CheckUserController::login'
-  methods:  [GET]
+  methods:  [POST]

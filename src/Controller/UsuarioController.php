@@ -25,23 +25,27 @@ class UsuarioController extends Controller
     public function news(Request $request)
     {
 
-        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager = $this->getDoctrine();
 
-        $usuario = new Usuario();
-        $usuario->setName($request->query->get('name'));
-        $usuario->setSurname($request->query->get('lastName'));
-        $usuario->setEmail($request->query->get('email'));
-        $usuario->setPassword($request->query->get('password'));
+        $user = $entityManager->getRepository(Usuario::class)->findOneBy(['email' => $request->query->get('email')]);
 
-        $entityManager->persist($usuario);
+        if (!empty($user)){
+            return new JsonResponse(['existe',$user->getName(),$user->getId()]);
+        }else{
 
-        $entityManager->flush();
+            $usuario = new Usuario();
+            $usuario->setName($request->query->get('name'));
+            $usuario->setSurname($request->query->get('lastName'));
+            $usuario->setEmail($request->query->get('email'));
+            $usuario->setPassword($request->query->get('password'));
 
-        $repository = $this->getDoctrine()->getRepository(Usuario::class);
-        $user = $repository->findOneBy(['email' => $request->query->get('email')]);
+            $entityManager->getManager()->persist($usuario);
 
-        dump($user);
-        return new JsonResponse([$user->getName(),$user->getId()]);
+            $entityManager->getManager()->flush();
+
+
+            return new JsonResponse(['nuevo',$usuario->getName(),$usuario->getId()]);
+        }
 
     }
 
