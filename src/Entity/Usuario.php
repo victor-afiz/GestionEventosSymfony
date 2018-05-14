@@ -24,7 +24,7 @@ class Usuario
     /**
      * @ORM\Column(type="string", length=100)
      */
-    private $surname;
+    private $nickname;
     
     /**
      * @ORM\Column(type="string", length=100)
@@ -63,17 +63,17 @@ class Usuario
     /**
      * @return mixed
      */
-    public function getSurname()
+    public function getNickname()
     {
-        return $this->surname;
+        return $this->nickname;
     }
 
     /**
-     * @param mixed $surname
+     * @param mixed $nickname
      */
-    public function setSurname($surname)
+    public function setNickname($nickname)
     {
-        $this->surname = $surname;
+        $this->nickname = $nickname;
     }
 
     /**
@@ -109,3 +109,4 @@ class Usuario
     }
 
 }
+

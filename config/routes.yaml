@@ -10,3 +10,8 @@ loginUser:
   path: /login/
   controller: 'App\Controller\CheckUserController::login'
   methods:  [POST]
+
+newEvento:
+  path: /crearevento/
+  controller: 'App\Controller\EventoController::index'
+  methods:  [POST]
