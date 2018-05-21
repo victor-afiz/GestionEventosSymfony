@@ -15,3 +15,8 @@ newEvento:
   path: /crearevento/
   controller: 'App\Controller\EventoController::index'
   methods:  [POST]
+
+allEvents:
+   path: /GetAllEvents/
+   controller: 'App\Controller\EventoController::allEventos'
+   methods:  [GET]

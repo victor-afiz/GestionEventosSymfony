@@ -27,6 +27,28 @@ class Eventos
     private $nombreEvento;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $EventImage;
+
+    /**
+     * @return mixed
+     */
+    public function getEventImage()
+    {
+        return $this->EventImage;
+    }
+
+    /**
+     * @param mixed $EventImage
+     */
+    public function setEventImage($EventImage)
+    {
+        $this->EventImage = $EventImage;
+    }
+
+
+    /**
      * @return mixed
      */
     public function getDescrripcion()

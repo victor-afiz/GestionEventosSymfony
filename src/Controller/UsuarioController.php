@@ -35,7 +35,7 @@ class UsuarioController extends Controller
 
             $usuario = new Usuario();
             $usuario->setName($request->query->get('name'));
-            $usuario->setNickname($request->query->get('lastName'));
+            $usuario->setNickname($request->query->get('nickName'));
             $usuario->setEmail($request->query->get('email'));
             $usuario->setPassword($request->query->get('password'));
 
