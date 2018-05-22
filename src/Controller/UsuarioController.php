@@ -5,7 +5,7 @@ header("Access-Control-Allow-Origin: *");
 
 
 //use http\Env\Request;
-
+use Doctrine\ORM\Query\ResultSetMapping;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -47,6 +47,22 @@ class UsuarioController extends Controller
             return new JsonResponse(['nuevo',$usuario->getName(),$usuario->getId()]);
         }
 
+    }
+
+    public function findUser(Request $request)
+    {
+
+        $entityManager = $this->getDoctrine();
+
+        $user = $entityManager->getRepository(Usuario::class)
+            ->findOneBy(['nickname'
+                => $request->query
+                    ->get('nickName')]);
+        if($user){
+            return new JsonResponse([$user->getId(),$user->getName(),$user->getNickname()]);
+        }else{
+            return new JsonResponse(["No Encontrado"]);
+        }
     }
 
 }

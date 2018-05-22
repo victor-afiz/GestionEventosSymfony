@@ -17,6 +17,11 @@ newEvento:
   methods:  [POST]
 
 allEvents:
-   path: /GetAllEvents/
+   path: /getAllEvents/
    controller: 'App\Controller\EventoController::allEventos'
+   methods:  [GET]
+
+findUser:
+   path: /getUser/
+   controller: 'App\Controller\UsuarioController::findUser'
    methods:  [GET]
