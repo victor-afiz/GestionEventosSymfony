@@ -40,6 +40,27 @@ class Eventos
     }
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    private $totalPrice;
+
+    /**
+     * @return mixed
+     */
+    public function getTotalPrice()
+    {
+        return $this->totalPrice;
+    }
+
+    /**
+     * @param mixed $totalPrice
+     */
+    public function setTotalPrice($totalPrice)
+    {
+        $this->totalPrice = $totalPrice;
+    }
+
+    /**
      * @param mixed $EventImage
      */
     public function setEventImage($EventImage)

@@ -29,7 +29,6 @@ class CheckUserController extends Controller
         if ($user->getEmail() === $email && $user->getPassword() === $password){
 
             $this->result = 'Welcome ';
-            dump($user);
             return new JsonResponse([$user->getName(), $user->getId()]);
             die;
         }
