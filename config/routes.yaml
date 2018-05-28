@@ -13,12 +13,12 @@ loginUser:
 
 newEvento:
   path: /crearevento/
-  controller: 'App\Controller\EventoController::index'
-  methods:  [POST]
+  controller: 'App\Controller\EventoController::createEvent'
+  methods:  [GET]
 
 allEvents:
    path: /getAllEvents/
-   controller: 'App\Controller\EventoController::allEventos'
+   controller: 'App\Controller\EventoController::getallEvent'
    methods:  [GET]
 
 findUser:

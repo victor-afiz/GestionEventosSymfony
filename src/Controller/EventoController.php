@@ -14,33 +14,44 @@ use Symfony\Component\Validator\Constraints\DateTime;
 class EventoController extends Controller
 {
 
-    public function index(Request $request)
+    public function createEvent(Request $request)
     {
         $entityManager = $this->getDoctrine();
 
-        //$user = $entityManager->getRepository(Usuario::class)->findOneBy(['email' => $request->query->get('email')]);
+            //$user = $entityManager->getRepository(Usuario::class)->findOneBy(['email' => $request->query->get('email')]);
 
             $evento = new Eventos();
-            $evento->setIdAdmin($request->get('admin'));
-            $evento->setNombreEvento($request->get('nombre'));
-            $evento->setDescrripcion($request->get('descripcion'));
-            $evento->setEventImage($request->get('url'));
-            //$evento->setDate(date("m-d-Y", strtotime($request->get('fecha'))));
+            $evento->setIdAdmin($request->query->get('IdAdmin'));
+            $evento->setNombreEvento($request->query->get('nombre'));
+            $evento->setDescrripcion($request->query->get('descripcion'));
+            $evento->setEventImage($request->query->get('url'));
+            $evento->setTotalPrice($request->query->get('totalPrice'));
+            $evento->setDate(\DateTime::createFromFormat('d/m/Y', $request->get('fecha')));
 
             $entityManager->getManager()->persist($evento);
-
             $entityManager->getManager()->flush();
 
-            $pertenece = new Pertenece();
-            $pertenece->setIdUsuario($request->query->get('admin'));
-            $pertenece->setIdEvento($evento->getId());
+            $str = $request->query->get('allUSer');
+            dump($request->query->get('allUSer'));
+            $arr1 = explode(",",$str);
 
+
+            $pertenece = new Pertenece();
+
+            foreach ($arr1 as $kye){
+//                print_r((int)$kye);
+                $pertenece->setIdUsuario((int)$kye);
+                $pertenece->setIdEvento($evento->getId());
+                $entityManager->getManager()->persist($pertenece);
+                $entityManager->getManager()->flush();
+                $entityManager->getManager()->clear();
+            }
 
             return new JsonResponse(['creado']);
 
     }
 
-    public function allEventos(Request $request)
+    public function getallEvent(Request $request)
     {
         $Events = $this->getDoctrine()
         ->getRepository(Eventos::class)
