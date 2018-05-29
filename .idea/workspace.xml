@@ -4,11 +4,10 @@
     <list default="true" id="026c855b-bdc6-4935-92ff-2d034e074278" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/EventoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EventoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsuarioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GestorDeEventos/src/components/for-actividades/for-actividades.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorDeEventos/src/components/for-actividades/for-actividades.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.html" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GestorDeEventos/src/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorDeEventos/src/pages/home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GestorDeEventos/src/pages/home/home.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorDeEventos/src/pages/home/home.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,41 +39,16 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="GestionEv@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="GestionEv@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="GestionEv@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="GestionEv: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="GestionEv@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="GestionEv: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="eventos: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="GestionEv@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="GestionEv: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="usuario: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.yaml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/routes.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="22" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="280">
+              <caret line="28" column="7" selection-start-line="28" selection-end-line="28" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -82,7 +56,7 @@
       <file leaf-file-name="Pertenece.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Pertenece.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="-120">
               <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
             </state>
           </provider>
@@ -91,7 +65,7 @@
       <file leaf-file-name="EventoController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="690">
               <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
               <folding>
                 <element signature="e#75#98#0#PHP" expanded="true" />
@@ -103,7 +77,7 @@
       <file leaf-file-name="home.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/home/home.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-421">
+            <state relative-caret-position="210">
               <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="42" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
@@ -126,31 +100,8 @@
       <file leaf-file-name="menu.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/menu/menu.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="for-actividades.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/components/for-actividades/for-actividades.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/login/login.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="405">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -161,22 +112,40 @@
       <file leaf-file-name="crear.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+            <state relative-caret-position="595">
+              <caret line="192" column="1" selection-start-line="192" selection-start-column="1" selection-end-line="192" selection-end-column="1" />
               <folding>
-                <element signature="e#0#42#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#3136#3178#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckUserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/CheckUserController.php">
+      <file leaf-file-name="UsuarioController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/UsuarioController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+            <state relative-caret-position="70">
+              <caret line="66" column="26" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crear.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1560">
+              <caret line="104" column="14" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crear.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
-                <element signature="e#75#98#0#PHP" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,7 +154,8 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../GestorDeEventos" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -193,16 +163,16 @@
         <option value="$PROJECT_DIR$/src/Entity/Participante.php" />
         <option value="$PROJECT_DIR$/src/Entity/Usuario.php" />
         <option value="$PROJECT_DIR$/src/Entity/Pertenece.php" />
-        <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.html" />
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/home/home.html" />
         <option value="$PROJECT_DIR$/src/Entity/Eventos.php" />
         <option value="$PROJECT_DIR$/src/Controller/CheckUserController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/UsuarioController.php" />
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/home/home.ts" />
-        <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.ts" />
-        <option value="$PROJECT_DIR$/config/routes.yaml" />
         <option value="$PROJECT_DIR$/src/Controller/EventoController.php" />
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/components/for-actividades/for-actividades.ts" />
+        <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.html" />
+        <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.ts" />
+        <option value="$PROJECT_DIR$/src/Controller/UsuarioController.php" />
+        <option value="$PROJECT_DIR$/config/routes.yaml" />
       </list>
     </option>
   </component>
@@ -214,9 +184,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/../GestorDeEventos/node_modules" />
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/package.json" />
+      <path value="$PROJECT_DIR$/../GestorDeEventos/package.json" />
     </packageJsonPaths>
   </component>
   <component name="PackageJsonUpdateNotifier">
@@ -334,38 +308,28 @@
           <expand>
             <path>
               <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestorDeEventos" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="GestionEventosSymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestorDeEventos" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="GestionEventosSymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionEventosSymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionEventosSymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestorDeEventos" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="GestionEventosSymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestorDeEventos" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="for-actividades" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestorDeEventos" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestorDeEventos" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="menu" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -417,30 +381,43 @@
       <workItem from="1527357948227" duration="5150000" />
       <workItem from="1527449962331" duration="12710000" />
       <workItem from="1527545665059" duration="480000" />
+      <workItem from="1527613158433" duration="1753000" />
+      <workItem from="1527615049398" duration="1796000" />
+      <workItem from="1527616908119" duration="1690000" />
+      <workItem from="1527618783842" duration="120000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43222000" />
+    <option name="totallyTimeSpent" value="48581000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1360" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007508" side_tool="true" weight="0.32994923" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50152206" side_tool="true" weight="0.32838285" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49847794" visible="true" weight="0.32838285" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.0" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924925" weight="0.40264025" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18188737" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19406393" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.15829529" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -455,28 +432,54 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.0" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17884323" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.15829529" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924925" weight="0.40264025" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007508" side_tool="true" weight="0.32994923" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32838285" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32922536" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17884323" />
+      <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -487,17 +490,17 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/UsuarioController.php">
+    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="47" selection-end-column="9" />
+        <state relative-caret-position="420">
+          <caret line="28" column="104" selection-start-line="28" selection-start-column="104" selection-end-line="28" selection-end-column="104" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
+    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        <state relative-caret-position="465">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -568,9 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="21" column="35" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="40" />
-          <folding>
-            <element signature="e#75#98#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -728,13 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/home/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -756,30 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/UsuarioController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Pertenece.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://bb7efb02-7c12-46e4-8bb5-467791f81e17/schema/GestionEv/table/pertenece">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -796,17 +765,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/CheckUserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
+        <state relative-caret-position="390">
           <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding>
-            <element signature="e#75#98#0#PHP" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/components/for-actividades/for-actividades.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="690">
           <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
           <folding>
             <element signature="e#75#98#0#PHP" expanded="true" />
@@ -814,10 +787,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/home/home.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="210">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -830,42 +806,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/login/login.ts">
+    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/menu/menu.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/home/home.ts">
+    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-421">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="1560">
+          <caret line="104" column="14" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="192" column="1" selection-start-line="192" selection-start-column="1" selection-end-line="192" selection-end-column="1" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#3136#3178#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/menu/menu.ts">
+    <entry file="file://$PROJECT_DIR$/src/Controller/UsuarioController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="70">
+          <caret line="66" column="26" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/components/for-actividades/for-actividades.ts">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Pertenece.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-120">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="28" column="7" selection-start-line="28" selection-end-line="28" selection-end-column="7" />
         </state>
       </provider>
     </entry>

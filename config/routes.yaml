@@ -25,3 +25,8 @@ findUser:
    path: /getUser/
    controller: 'App\Controller\UsuarioController::findUser'
    methods:  [GET]
+
+getUser:
+   path: /User/
+   controller: 'App\Controller\UsuarioController::getAll'
+   methods:  [GET]

@@ -64,5 +64,23 @@ class UsuarioController extends Controller
             return new JsonResponse(["No Encontrado"]);
         }
     }
+    public function getAll(Request $request)
+    {
+        $Users = $this->getDoctrine()
+            ->getRepository(Usuario::class)
+            ->findAll();
+
+        $arrayUser = [];
+        foreach ($Users as $user){
+            $arrayUser[] = [
+                "id" => $user->getId(),
+                "name" => $user->getName(),
+                "nick_name" => $user->getNickname(),
+                "email" => $user->getEmail(),
+                "password" => $user->getPassword()
+            ];
+        }
+        return new JsonResponse($arrayUser);
+    }
 
 }
