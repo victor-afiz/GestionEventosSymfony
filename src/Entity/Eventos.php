@@ -32,17 +32,14 @@ class Eventos
     private $EventImage;
 
     /**
-     * @return mixed
-     */
-    public function getEventImage()
-    {
-        return $this->EventImage;
-    }
-
-    /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $totalPrice;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $deleteEvent;
 
     /**
      * @return mixed
@@ -139,4 +136,30 @@ class Eventos
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getDeleteEvent()
+    {
+        return $this->deleteEvent;
+    }
+
+    /**
+     * @param mixed $deleteEvent
+     */
+    public function setDeleteEvent($deleteEvent)
+    {
+        $this->deleteEvent = $deleteEvent;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEventImage()
+    {
+        return $this->EventImage;
+    }
+
+
 }

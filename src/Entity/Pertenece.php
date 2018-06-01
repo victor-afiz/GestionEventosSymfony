@@ -26,6 +26,32 @@ class Pertenece
      */
     private $idEvento;
 
+    /**
+     * @ORM\Column(type="string", length=655, nullable=true)
+     */
+    private $mensaje;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $deletParticipante;
+
+    /**
+     * @return mixed
+     */
+    public function getDeletParticipante()
+    {
+        return $this->deletParticipante;
+    }
+
+    /**
+     * @param mixed $deletParticipante
+     */
+    public function setDeletParticipante($deletParticipante)
+    {
+        $this->deletParticipante = $deletParticipante;
+    }
+
     public function getId()
     {
         return $this->id;
@@ -53,5 +79,15 @@ class Pertenece
         $this->idEvento = $idEvento;
 
         return $this;
+    }
+
+    public function getMensaje()
+    {
+        return $this->mensaje;
+    }
+
+    public function setMensaje($mensaje)
+    {
+        $this->mensaje = $mensaje;
     }
 }

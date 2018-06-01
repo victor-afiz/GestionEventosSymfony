@@ -1,4 +1,4 @@
-<?php declare(strict_types = 1);
+<?php
 
 namespace DoctrineMigrations;
 
@@ -8,21 +8,27 @@ use Doctrine\DBAL\Schema\Schema;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-class Version20180526181842 extends AbstractMigration
+class Version20180601081523 extends AbstractMigration
 {
+    /**
+     * @param Schema $schema
+     */
     public function up(Schema $schema)
     {
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('CREATE TABLE pertenece (id INT AUTO_INCREMENT NOT NULL, id_usuario INT NOT NULL, id_evento INT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
+        $this->addSql('ALTER TABLE eventos CHANGE delete_event delete_event INT DEFAULT NULL');
     }
 
+    /**
+     * @param Schema $schema
+     */
     public function down(Schema $schema)
     {
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('DROP TABLE pertenece');
+        $this->addSql('ALTER TABLE eventos CHANGE delete_event delete_event INT NOT NULL');
     }
 }

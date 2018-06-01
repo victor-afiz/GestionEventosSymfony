@@ -53,10 +53,11 @@ class EventoController extends Controller
 
     public function getallEvent(Request $request)
     {
-        $Events = $this->getDoctrine()
-        ->getRepository(Eventos::class)
-        ->findAll();
-        //dump($Events);
+        $pertenece = $this->getDoctrine()
+        ->getRepository(Pertenece::class)
+        ->findBy(['id' => $request->query->get('id') , 'deletParticipante' => null]);
+        dump($pertenece);
+        die();
 
         $arrayManagers = [];
         foreach ($Events as $Event){
@@ -69,9 +70,7 @@ class EventoController extends Controller
                 "Date" => $Event->getDate()
             ];
         }
-
         return new JsonResponse($arrayManagers);
-
     }
 
 

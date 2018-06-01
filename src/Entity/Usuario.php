@@ -37,6 +37,12 @@ class Usuario
     private $password;
 
     /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $deleteUser;
+
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -107,6 +113,23 @@ class Usuario
     {
         $this->password = $password;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getDeleteUser()
+    {
+        return $this->deleteUser;
+    }
+
+    /**
+     * @param mixed $deleteUser
+     */
+    public function setDeleteUser($deleteUser)
+    {
+        $this->deleteUser = $deleteUser;
+    }
+
 
 }
 

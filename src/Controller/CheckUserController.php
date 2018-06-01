@@ -23,15 +23,14 @@ class CheckUserController extends Controller
         $user = $repository->findOneBy(['email' => $email]);
 
         if (false === $user) {
-            return new JsonResponse('User not valid');
+            $this->result ='User not valid';
         }
 
         if ($user->getEmail() === $email && $user->getPassword() === $password){
 
-            $this->result = 'Welcome ';
-            return new JsonResponse([$user->getName(), $user->getId()]);
-            die;
+          //  $this->result = 'Welcome ';
+            $this->result =[$user->getName(), $user->getId()];
         }
-        return new Response('Password not valid');
+        return new JsonResponse($this->result);
     }
 }
