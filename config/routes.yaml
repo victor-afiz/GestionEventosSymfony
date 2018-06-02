@@ -4,12 +4,12 @@
 news:
   path: /usuario/
   defaults: { _controller: 'App\Controller\UsuarioController::news' }
-  methods:  [POST]
+  methods:  [GET]
 
 loginUser:
   path: /login/
   controller: 'App\Controller\CheckUserController::login'
-  methods:  [POST]
+  methods:  [GET]
 
 newEvento:
   path: /crearevento/
