@@ -31,20 +31,29 @@ class EventoController extends Controller
             $entityManager->getManager()->persist($evento);
             $entityManager->getManager()->flush();
 
-            $str = $request->query->get('allUSer');
-            dump($request->query->get('allUSer'));
-            $arr1 = explode(",",$str);
+            $allMembers = $request->query->get('allUSer');
+
+            $convertAllMembers = array_map('intval', explode(',', $allMembers));
+
+
 
 
             $pertenece = new Pertenece();
 
-            foreach ($arr1 as $kye){
-//                print_r((int)$kye);
-                $pertenece->setIdUsuario((int)$kye);
+                $pertenece->setIdUsuario($evento->getIdAdmin());
                 $pertenece->setIdEvento($evento->getId());
                 $entityManager->getManager()->persist($pertenece);
                 $entityManager->getManager()->flush();
                 $entityManager->getManager()->clear();
+
+            foreach ($convertAllMembers as $kye){
+
+                $pertenece->setIdUsuario($kye);
+                $pertenece->setIdEvento($evento->getId());
+                $entityManager->getManager()->persist($pertenece);
+                $entityManager->getManager()->flush();
+                $entityManager->getManager()->clear();
+
             }
 
             return new JsonResponse(['creado']);
@@ -53,23 +62,40 @@ class EventoController extends Controller
 
     public function getallEvent(Request $request)
     {
-        $pertenece = $this->getDoctrine()
-        ->getRepository(Pertenece::class)
-        ->findBy(['id' => $request->query->get('id') , 'deletParticipante' => null]);
-        dump($pertenece);
-        die();
+        $entityManager = $this->getDoctrine();
 
-        $arrayManagers = [];
-        foreach ($Events as $Event){
-            $arrayManagers[] = [
-                "ID" => $Event->getId(),
-                "AdminID" => $Event->getIdAdmin(),
-                "Name" => $Event->getNombreEvento(),
-                "Description" => $Event->getDescrripcion(),
-                "Url" => $Event->getEventImage(),
-                "Date" => $Event->getDate()
+        $Members = $entityManager->getRepository(Pertenece::class)
+            ->findBy(['idUsuario' => $request->query->get('id') , 'deletParticipante' => null]);
+
+
+        foreach ($Members as $member){
+            $EventsId[] = [
+                'idEvento' => $member->getIdEvento()
             ];
         }
+
+        foreach ($EventsId as $eventid){
+
+
+
+            $allYourEvents = $entityManager->getRepository(Eventos::class)
+                ->findBy(['id' => $eventid['idEvento'] , 'deleteEvent' => null]);
+
+
+
+            foreach ($allYourEvents as $yourEvents) {
+                $arrayManagers[] = [
+                    "ID" => $yourEvents->getId(),
+                    "AdminID" => $yourEvents->getIdAdmin(),
+                    "Name" => $yourEvents->getNombreEvento(),
+                    "Description" => $yourEvents->getDescrripcion(),
+                    "Url" => $yourEvents->getEventImage(),
+                    "Date" => $yourEvents->getDate()
+                ];
+            }
+
+        }
+
         return new JsonResponse($arrayManagers);
     }
 
