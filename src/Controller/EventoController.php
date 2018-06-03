@@ -28,15 +28,12 @@ class EventoController extends Controller
             $evento->setTotalPrice($request->query->get('totalPrice'));
             $evento->setDate(\DateTime::createFromFormat('d/m/Y', $request->get('fecha')));
 
-            $entityManager->getManager()->persist($evento);
-            $entityManager->getManager()->flush();
-
             $allMembers = $request->query->get('allUSer');
-
             $convertAllMembers = array_map('intval', explode(',', $allMembers));
 
-
-
+            $evento->setTotalMemebers(count($convertAllMembers));
+            $entityManager->getManager()->persist($evento);
+            $entityManager->getManager()->flush();
 
             $pertenece = new Pertenece();
 
@@ -76,12 +73,8 @@ class EventoController extends Controller
 
         foreach ($EventsId as $eventid){
 
-
-
             $allYourEvents = $entityManager->getRepository(Eventos::class)
                 ->findBy(['id' => $eventid['idEvento'] , 'deleteEvent' => null]);
-
-
 
             foreach ($allYourEvents as $yourEvents) {
                 $arrayManagers[] = [
@@ -90,6 +83,7 @@ class EventoController extends Controller
                     "Name" => $yourEvents->getNombreEvento(),
                     "Description" => $yourEvents->getDescrripcion(),
                     "Url" => $yourEvents->getEventImage(),
+                    "TotalMemebers" => $yourEvents->getTotalMemebers(),
                     "Date" => $yourEvents->getDate()
                 ];
             }
@@ -98,6 +92,5 @@ class EventoController extends Controller
 
         return new JsonResponse($arrayManagers);
     }
-
 
 }

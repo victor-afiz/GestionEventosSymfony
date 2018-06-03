@@ -42,6 +42,11 @@ class Eventos
     private $deleteEvent;
 
     /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $totalMemebers;
+
+    /**
      * @return mixed
      */
     public function getTotalPrice()
@@ -159,6 +164,22 @@ class Eventos
     public function getEventImage()
     {
         return $this->EventImage;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTotalMemebers()
+    {
+        return $this->totalMemebers;
+    }
+
+    /**
+     * @param mixed $totalMemebers
+     */
+    public function setTotalMemebers($totalMemebers)
+    {
+        $this->totalMemebers = $totalMemebers;
     }
 
 
