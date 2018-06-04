@@ -91,8 +91,6 @@ class EventoController extends Controller
             }
 
         }
-        dump($arrayManagers);
-        die;
         return new JsonResponse($arrayManagers);
     }
 
