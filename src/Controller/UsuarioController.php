@@ -27,7 +27,6 @@ class UsuarioController extends Controller
 
         $entityManager = $this->getDoctrine();
 
-        $user = $entityManager->getRepository(Usuario::class)->findOneBy(['email' => $request->query->get('email')]);
 
         if (!empty($user)){
             return new JsonResponse(['existe',$user->getName(),$user->getId()]);
@@ -94,16 +93,26 @@ class UsuarioController extends Controller
 
     public function deleteUser(Request $request)
     {
+        $result = "";
 
-        $entityManager = $this->getDoctrine();
+        if($request->query->get('id')) {
+            $em = $this->getDoctrine()->getEntityManager();
+            $user = $em->getRepository(Usuario::class)->findOneBy(['id' => $request->query->get('id'), 'deleteUser' => null]);
+            if($user === null){
+                $result = "Usuario no encontrado";
+            }else{
 
-        $single_user = $entityManager->find('usuario', $request->query->get('id'));
+                $user->setDeleteUser(0);
+                $em->flush();
 
-        $entityManager->remove($single_user);
+                $result = "Usuario eliminado";
+            }
 
-        $entityManager->flush();
+        }else{
+            $result = "Usuario no encontrado";
+        }
 
-        return new JsonResponse($single_user);
+        return new JsonResponse($result);
    }
 
 }

@@ -37,6 +37,16 @@ getMembers:
    methods:  [GET]
 
 deleteuser:
-   path: /DeleteUser/
+   path: /deleteUser/
    controller: 'App\Controller\UsuarioController::deleteUser'
+   methods:  [GET]
+
+deleteevent:
+   path: /deleteEvent/
+   controller: 'App\Controller\EventoController::deleteEvent'
+   methods:  [GET]
+
+deletemember:
+   path: /deleteMember/
+   controller: 'App\Controller\EventoController::deleteMember'
    methods:  [GET]

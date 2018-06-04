@@ -92,24 +92,113 @@ class EventoController extends Controller
         }
         return new JsonResponse($arrayManagers);
     }
+
     function getAllMembers(Request $request)
     {
         $entityManager = $this->getDoctrine();
 
-        $Members = $entityManager->getRepository(Pertenece::class)
-            ->findBy(['idEvento' => $request->query->get('id') , 'deletParticipante' => null]);
+        $result = "";
 
-        foreach ($Members as $member) {
-            $arrayMembers[] = [
-                "id" => $member->getId(),
-                "idUsuario" => $member->getIdUsuario(),
-                "idEvento" => $member->getIdEvento(),
-                "mensaje" => $member->getMensaje(),
-                "deletParticipante" => $member->getDeletParticipante()
-            ];
+        if($request->query->get('id')){
+            $Members = $entityManager->getRepository(Pertenece::class)
+                ->findBy(['idEvento' => $request->query->get('id') , 'deletParticipante' => null]);
+
+            foreach ($Members as $member) {
+                $arrayMembers[] = [
+
+                    "id" => $member->getId(),
+                    "idUsuario" => $member->getIdUsuario(),
+                    "idEvento" => $member->getIdEvento(),
+                    "mensaje" => $member->getMensaje(),
+                    "deletParticipante" => $member->getDeletParticipante()
+
+                ];
+            }
+            $result = $arrayMembers;
+        }else{
+
+            $result = "Evento no encontrado" ;
         }
 
-        return new JsonResponse($arrayMembers);
+
+        return new JsonResponse($result);
+    }
+
+    public function deleteEvent(Request $request)
+    {
+        $result = "";
+
+        if($request->query->get('id')){
+            $em = $this
+                ->getDoctrine()
+                ->getEntityManager();
+            $event = $em
+                ->getRepository(Eventos::class)
+                ->findOneBy(['id' => $request->query->get('id') , 'deleteEvent' => null]);
+
+            if($event === null){
+                $result = "Evento no encontrado";
+            }else{
+                $event->setDeleteEvent(0);
+                $em->flush();
+                $result = "Eliminado";
+            }
+
+        }else{
+            $result = "Evento no encontrado";
+        }
+
+
+        return new JsonResponse($result);
+    }
+
+    public function deleteMember(Request $request)
+    {
+        $result = "";
+
+        if($request->query->get('idusuario') && $request->query->get('idEvento')){
+
+            $em = $this->getDoctrine()->getEntityManager();
+
+            $event = $em
+                ->getRepository(Pertenece::class)
+                ->findOneBy(['idUsuario' => $request->query->get('idusuario') ,'idEvento' => $request->query->get('idEvento'), 'deletParticipante' => null]);
+            dump($request->query->get('idusuario'));
+            dump($request->query->get('idEvento'));
+
+            dump($event);
+            die;
+
+//            if($event === null){
+//                $result = "Evento no encontrado";
+//            }else{
+//                $event->setDeleteEvent(0);
+//                $em->flush();
+//                $result = "Eliminado";
+//            }
+//
+        }else{
+        }
+
+//        if($request->query->get('idUser') && $request->query->get('idEvent')){
+//            $em = $this->getDoctrine()->getEntityManager();
+//
+//            $event = $em
+//                ->getRepository(Pertenece::class)
+//                ->findOneBy(['idUser' => $request->query->get('id') ,'idEvent' => $request->query->get('id') 'deleteEvent' => null]);
+//
+//            if($event === null){
+//                $result = "Evento no encontrado";
+//            }else{
+//                $event->setDeleteEvent(0);
+//                $em->flush();
+//                $result = "Eliminado";
+//            }
+//
+//        }else{
+//            $result = "Evento no encontrado";
+//        }
+        return new JsonResponse("");
     }
 
 }
