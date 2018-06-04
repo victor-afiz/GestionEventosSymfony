@@ -1,4 +1,4 @@
-<?php declare(strict_types = 1);
+<?php
 
 namespace DoctrineMigrations;
 
@@ -8,8 +8,11 @@ use Doctrine\DBAL\Schema\Schema;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-class Version20180603214758 extends AbstractMigration
+class Version20180604064202 extends AbstractMigration
 {
+    /**
+     * @param Schema $schema
+     */
     public function up(Schema $schema)
     {
         // this up() migration is auto-generated, please modify it to your needs
@@ -18,6 +21,9 @@ class Version20180603214758 extends AbstractMigration
         $this->addSql('ALTER TABLE eventos ADD total_memebers INT DEFAULT NULL');
     }
 
+    /**
+     * @param Schema $schema
+     */
     public function down(Schema $schema)
     {
         // this down() migration is auto-generated, please modify it to your needs

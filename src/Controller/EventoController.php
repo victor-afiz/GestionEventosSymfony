@@ -31,7 +31,9 @@ class EventoController extends Controller
             $allMembers = $request->query->get('allUSer');
             $convertAllMembers = array_map('intval', explode(',', $allMembers));
 
-            $evento->setTotalMemebers(count($convertAllMembers));
+
+
+            $evento->setTotalMemebers(count($convertAllMembers)+1);
             $entityManager->getManager()->persist($evento);
             $entityManager->getManager()->flush();
 
@@ -89,7 +91,8 @@ class EventoController extends Controller
             }
 
         }
-
+        dump($arrayManagers);
+        die;
         return new JsonResponse($arrayManagers);
     }
 
