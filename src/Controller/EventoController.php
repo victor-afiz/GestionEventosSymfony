@@ -92,5 +92,23 @@ class EventoController extends Controller
         }
         return new JsonResponse($arrayManagers);
     }
+    function getAllMemebers(Request $request)
+    {
+        $entityManager = $this->getDoctrine();
+
+        $Members = $entityManager->getRepository(Pertenece::class)
+            ->findBy(['idEvento' => $request->query->get('id') , 'deletParticipante' => null]);
+
+        foreach ($Members as $member) {
+            $arrayMembers[] = [
+                "id" => $member->getId(),
+                "idUsuario" => $member->getIdUsuario(),
+                "idEvento" => $member->getIdEvento(),
+                "mensaje" => $member->getMensaje(),
+                "deletParticipante" => $member->getDeletParticipante()
+            ];
+        }
+        return new JsonResponse($arrayMembers);
+    }
 
 }

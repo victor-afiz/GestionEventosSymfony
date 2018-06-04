@@ -30,3 +30,13 @@ getUser:
    path: /User/
    controller: 'App\Controller\UsuarioController::getAll'
    methods:  [GET]
+
+getMembers:
+   path: /GetAllMemebers/
+   controller: 'App\Controller\EventoController::getAllMemebers'
+   methods:  [GET]
+
+deleteuser:
+   path: /DeleteUser/
+   controller: 'App\Controller\UsuarioController::deleteUser'
+   methods:  [GET]

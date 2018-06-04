@@ -97,17 +97,13 @@ class UsuarioController extends Controller
 
         $entityManager = $this->getDoctrine();
 
-//        $Users =  $entityManager
-//            ->getEntityManager()
-//            ->createQueryBuilder()
-//            ->
-//            ->from('App:Usuario', 'usuario')
-//            ->where('usuario.id != :id')
-//            ->setParameter('id', $request->query->get('id'))
-//            ->getQuery()
-//            ->execute();
-//
-//        return new JsonResponse($arrayUser);
+        $single_user = $entityManager->find('usuario', $request->query->get('id'));
+
+        $entityManager->remove($single_user);
+
+        $entityManager->flush();
+
+        return new JsonResponse($single_user);
    }
 
 }
