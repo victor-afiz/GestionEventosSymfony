@@ -92,7 +92,7 @@ class EventoController extends Controller
         }
         return new JsonResponse($arrayManagers);
     }
-    function getAllMemebers(Request $request)
+    function getAllMembers(Request $request)
     {
         $entityManager = $this->getDoctrine();
 
@@ -108,6 +108,7 @@ class EventoController extends Controller
                 "deletParticipante" => $member->getDeletParticipante()
             ];
         }
+
         return new JsonResponse($arrayMembers);
     }
 

@@ -32,8 +32,8 @@ getUser:
    methods:  [GET]
 
 getMembers:
-   path: /GetAllMemebers/
-   controller: 'App\Controller\EventoController::getAllMemebers'
+   path: /getAllMembers/
+   controller: 'App\Controller\EventoController::getAllMembers'
    methods:  [GET]
 
 deleteuser:
