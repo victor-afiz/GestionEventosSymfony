@@ -89,7 +89,6 @@ class EventoController extends Controller
                     "Date" => $yourEvents->getDate()
                 ];
             }
-
         }
         return new JsonResponse($arrayManagers);
     }

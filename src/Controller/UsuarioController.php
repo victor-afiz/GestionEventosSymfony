@@ -64,11 +64,20 @@ class UsuarioController extends Controller
             return new JsonResponse(["No Encontrado"]);
         }
     }
+
     public function getAll(Request $request)
     {
-        $Users = $this->getDoctrine()
-            ->getRepository(Usuario::class)
-            ->findAll();
+        $entityManager = $this->getDoctrine();
+
+        $Users =  $entityManager
+            ->getEntityManager()
+            ->createQueryBuilder()
+            ->select('usuario')
+            ->from('App:Usuario', 'usuario')
+            ->where('usuario.id != :id')
+            ->setParameter('id', $request->query->get('id'))
+            ->getQuery()
+            ->execute();
 
         $arrayUser = [];
         foreach ($Users as $user){
@@ -82,5 +91,23 @@ class UsuarioController extends Controller
         }
         return new JsonResponse($arrayUser);
     }
+
+    public function deleteUser(Request $request)
+    {
+
+        $entityManager = $this->getDoctrine();
+
+//        $Users =  $entityManager
+//            ->getEntityManager()
+//            ->createQueryBuilder()
+//            ->
+//            ->from('App:Usuario', 'usuario')
+//            ->where('usuario.id != :id')
+//            ->setParameter('id', $request->query->get('id'))
+//            ->getQuery()
+//            ->execute();
+//
+//        return new JsonResponse($arrayUser);
+   }
 
 }
