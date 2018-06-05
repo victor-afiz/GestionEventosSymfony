@@ -17,19 +17,30 @@ class EventoController extends Controller
     public function createEvent(Request $request)
     {
         $entityManager = $this->getDoctrine();
+        $result = "";
+        $adminID = $request->query->get('IdAdmin');
+        $evetName = $request->query->get('nombre');
+        $eventDescription = $request->query->get('descripcion');
+        $eventUrl = $request->query->get('url');
+        $eventTotalPrice = $request->query->get('totalPrice');
+        $eventDate = $request->query->get('fecha');
+        $eventAllMembers = $request->query->get('allUSer');
 
-            //$user = $entityManager->getRepository(Usuario::class)->findOneBy(['email' => $request->query->get('email')]);
 
+        if ($adminID && $evetName && $eventDescription && $eventUrl && $eventTotalPrice && $eventDate && $eventAllMembers){
+
+        }else{
+
+        }
             $evento = new Eventos();
-            $evento->setIdAdmin($request->query->get('IdAdmin'));
-            $evento->setNombreEvento($request->query->get('nombre'));
-            $evento->setDescrripcion($request->query->get('descripcion'));
-            $evento->setEventImage($request->query->get('url'));
-            $evento->setTotalPrice($request->query->get('totalPrice'));
-            $evento->setDate(\DateTime::createFromFormat('d/m/Y', $request->get('fecha')));
+            $evento->setIdAdmin($adminID);
+            $evento->setNombreEvento($evetName);
+            $evento->setDescrripcion($eventDescription);
+            $evento->setEventImage($eventUrl);
+            $evento->setTotalPrice($eventTotalPrice);
+            $evento->setDate(\DateTime::createFromFormat('d/m/Y', $eventDate));
 
-            $allMembers = $request->query->get('allUSer');
-            $convertAllMembers = array_map('intval', explode(',', $allMembers));
+            $convertAllMembers = array_map('intval', explode(',', $eventAllMembers));
 
 
 
@@ -86,7 +97,8 @@ class EventoController extends Controller
                     "Description" => $yourEvents->getDescrripcion(),
                     "Url" => $yourEvents->getEventImage(),
                     "TotalMemebers" => $yourEvents->getTotalMemebers(),
-                    "Date" => $yourEvents->getDate()
+                    "Date" => $yourEvents->getDate(),
+                    "Message" => $yourEvents->getDate()
                 ];
             }
         }
