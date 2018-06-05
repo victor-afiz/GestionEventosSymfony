@@ -22,7 +22,7 @@ class UsuarioController extends Controller
      * @param Request $request
      * @return JsonResponse
      */
-    public function news(Request $request)
+    public function news(Request $request, \Swift_Mailer $mailer)
     {
 
         $entityManager = $this->getDoctrine();
@@ -42,6 +42,7 @@ class UsuarioController extends Controller
 
             $entityManager->getManager()->flush();
 
+            $this->sendNudes($usuario->getName(),$usuario->getNickname(),$usuario->getEmail(),$usuario->getPassword(), $mailer);
 
             return new JsonResponse(['nuevo',$usuario->getName(),$usuario->getId()]);
         }
@@ -114,5 +115,28 @@ class UsuarioController extends Controller
 
         return new JsonResponse($result);
    }
+
+    public function sendNudes($Name,$Nickname,$Email,$Password, \Swift_Mailer $mailer)
+    {
+        $message = (new \Swift_Message('Hello Email'))
+            ->setFrom('send@example.com')
+            ->setTo('afeez@mailinator.com')
+            ->setBody(
+                '<pre>'.
+                '¡Te damos la bienvenida a WhatGram!'. $Name. 'Gracias por unirte a nuestra comunidad. Estos son los datos de tu cuenta:'.
+
+                'Nombre: '. $Name.
+                'NickName: '. $Nickname.
+                'Email: '. $Email.
+                'Password: '. $Password .
+
+                'Enviado por WhatGram, Inc'.
+                '</pre>'
+            );
+
+        $mailer->send($message);
+
+        return "" ;
+    }
 
 }

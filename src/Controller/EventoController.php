@@ -27,7 +27,6 @@ class EventoController extends Controller
         $eventDate = $request->query->get('fecha');
         $eventAllMembers = $request->query->get('allUSer');
 
-
         if ($adminID && $evetName && $eventDescription && $eventUrl && $eventTotalPrice && $eventDate && $eventAllMembers){
 
         }else{
@@ -279,7 +278,4 @@ class EventoController extends Controller
         }
         return new JsonResponse($result);
     }
-
-
-
 }
