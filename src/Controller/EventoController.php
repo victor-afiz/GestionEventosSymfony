@@ -201,4 +201,33 @@ class EventoController extends Controller
         return new JsonResponse("");
     }
 
+    public function setMemberMessage(Request $request)
+    {
+        $entityManager = $this->getDoctrine()->getEntityManager();
+        $result = "";
+        $userID = $request->query->get('idUser');
+        $eventID = $request->query->get('idEvent');
+        $messege = $request->query->get('message');
+
+        if($userID && $eventID && $messege) {
+
+            $user = $entityManager->getRepository(Pertenece::class)
+                ->findOneBy(['idUsuario' => $userID,'idEvento' => $eventID,'idEvento' => $eventID, 'deletParticipante' => null]);
+            if($user === null){
+                $result = "Participante no encontrado";
+            }else{
+
+                $user->setMensaje($messege);
+                $entityManager->flush();
+
+                $result = "Mensaje Modificado";
+            }
+
+        }else{
+            $result = "Participante no encontrado";
+        }
+        return new JsonResponse($result);
+    }
+
+
 }

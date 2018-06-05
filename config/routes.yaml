@@ -50,3 +50,8 @@ deletemember:
    path: /deleteMember/
    controller: 'App\Controller\EventoController::deleteMember'
    methods:  [GET]
+
+setmembermessege:
+   path: /setMemberMessage/
+   controller: 'App\Controller\EventoController::setMemberMessage'
+   methods:  [GET]
