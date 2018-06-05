@@ -98,7 +98,7 @@ class EventoController extends Controller
                     "Url" => $yourEvents->getEventImage(),
                     "TotalMemebers" => $yourEvents->getTotalMemebers(),
                     "Date" => $yourEvents->getDate(),
-                    "Message" => $yourEvents->getDate()
+                    "Message" => $yourEvents->getMessage()
                 ];
             }
         }
