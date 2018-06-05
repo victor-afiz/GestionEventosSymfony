@@ -109,6 +109,12 @@ class Eventos
     private $descrripcion;
 
     /**
+     * @ORM\Column(type="string", length=600, nullable=true)
+     */
+
+    private $message;
+
+    /**
      * @ORM\Column(type="datetime", length=600)
      */
     private $date;
@@ -180,6 +186,22 @@ class Eventos
     public function setTotalMemebers($totalMemebers)
     {
         $this->totalMemebers = $totalMemebers;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * @param mixed $message
+     */
+    public function setMessage($message): void
+    {
+        $this->message = $message;
     }
 
 

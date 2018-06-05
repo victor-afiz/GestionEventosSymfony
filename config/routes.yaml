@@ -55,3 +55,8 @@ setmembermessege:
    path: /setMemberMessage/
    controller: 'App\Controller\EventoController::setMemberMessage'
    methods:  [GET]
+
+seteventmessege:
+   path: /setEventMessage/
+   controller: 'App\Controller\EventoController::setEventMessage'
+   methods:  [GET]
