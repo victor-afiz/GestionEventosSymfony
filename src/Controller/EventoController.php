@@ -127,21 +127,42 @@ class EventoController extends Controller
     public function deleteEvent(Request $request)
     {
         $result = "";
+        $entityManager = $this->getDoctrine()->getEntityManager();
+        $EventID = $request->query->get('idEvent');
 
-        if($request->query->get('id')){
-            $em = $this
+        if($EventID){
+            $entityManager = $this
                 ->getDoctrine()
                 ->getEntityManager();
-            $event = $em
+
+            $event = $entityManager
                 ->getRepository(Eventos::class)
-                ->findOneBy(['id' => $request->query->get('id') , 'deleteEvent' => null]);
+                ->findOneBy(['id' => $request->query->get('idEvent') , 'deleteEvent' => null]);
 
             if($event === null){
                 $result = "Evento no encontrado";
             }else{
-                $event->setDeleteEvent(0);
-                $em->flush();
-                $result = "Eliminado";
+                $event->setDeleteEvent("");
+                $entityManager->flush();
+
+                $members = $entityManager
+                    ->getRepository(Pertenece::class)
+                    ->findBy(['idEvento' => $request->query->get('idEvent') , 'deletParticipante' => null]);
+
+                if ($members){
+
+                    foreach ($members as $member){
+
+                        $user = $entityManager
+                            ->getRepository(Pertenece::class)
+                            ->findOneBy(['id' => $member->getId(), 'deletParticipante' => null]);
+
+                        $user->setDeletParticipante(0);
+                        $entityManager->flush();
+                    }
+                    $result = "Evento y Participantes Eliminados";
+                }
+
             }
 
         }else{
@@ -154,51 +175,32 @@ class EventoController extends Controller
 
     public function deleteMember(Request $request)
     {
+        $entityManager = $this->getDoctrine()->getEntityManager();
         $result = "";
+        $userID = $request->query->get('idUser');
+        $eventID = $request->query->get('idEvent');
 
-        if($request->query->get('idusuario') && $request->query->get('idEvento')){
-
-            $em = $this->getDoctrine()->getEntityManager();
-
-            $event = $em
+        if($userID && $eventID)
+        {
+            $user = $entityManager
                 ->getRepository(Pertenece::class)
-                ->findOneBy(['idUsuario' => $request->query->get('idusuario') ,'idEvento' => $request->query->get('idEvento'), 'deletParticipante' => null]);
-            dump($request->query->get('idusuario'));
-            dump($request->query->get('idEvento'));
+                ->findOneBy(['idUsuario' => $userID, 'idEvento' => $eventID, 'deletParticipante' => null]);
+            if($user === null)
+            {
+                $result = "Participante no encontrado";
+            }else{
 
-            dump($event);
-            die;
+                $user->setDeletParticipante(0);
+                $entityManager->flush();
 
-//            if($event === null){
-//                $result = "Evento no encontrado";
-//            }else{
-//                $event->setDeleteEvent(0);
-//                $em->flush();
-//                $result = "Eliminado";
-//            }
-//
+                $result = "Participante Eliminado";
+            }
+
         }else{
+            $result = "Participante no encontrado";
         }
 
-//        if($request->query->get('idUser') && $request->query->get('idEvent')){
-//            $em = $this->getDoctrine()->getEntityManager();
-//
-//            $event = $em
-//                ->getRepository(Pertenece::class)
-//                ->findOneBy(['idUser' => $request->query->get('id') ,'idEvent' => $request->query->get('id') 'deleteEvent' => null]);
-//
-//            if($event === null){
-//                $result = "Evento no encontrado";
-//            }else{
-//                $event->setDeleteEvent(0);
-//                $em->flush();
-//                $result = "Eliminado";
-//            }
-//
-//        }else{
-//            $result = "Evento no encontrado";
-//        }
-        return new JsonResponse("");
+        return new JsonResponse($result);
     }
 
     public function setMemberMessage(Request $request)
@@ -228,6 +230,7 @@ class EventoController extends Controller
         }
         return new JsonResponse($result);
     }
+
 
 
 }
