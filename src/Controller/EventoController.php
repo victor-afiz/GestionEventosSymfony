@@ -115,23 +115,27 @@ class EventoController extends Controller
         if($request->query->get('id')){
             $Members = $entityManager->getRepository(Pertenece::class)
                 ->findBy(['idEvento' => $request->query->get('id') , 'deletParticipante' => null]);
+            if($Members){
+                foreach ($Members as $member) {
+                    $user = $entityManager->getRepository(Usuario::class)
+                        ->findOneBy(['id' => $member->getIdUsuario(), 'deleteUser' => null]);
+                    $arrayMembers[] = [
 
-            foreach ($Members as $member) {
-                $user = $entityManager->getRepository(Usuario::class)
-                    ->findOneBy(['id' => $member->getIdUsuario(), 'deleteUser' => null]);
-                $arrayMembers[] = [
+                        "id" => $member->getId(),
+                        "idUsuario" => $member->getIdUsuario(),
+                        "nombreParticipante" => $user->getName(),
+                        "idEvento" => $member->getIdEvento(),
+                        "mensaje" => $member->getMensaje(),
+                        "deletParticipante" => $member->getDeletParticipante()
 
-                    "id" => $member->getId(),
-                    "idUsuario" => $member->getIdUsuario(),
-                    "nombreParticipante" => $user->getName(),
-                    "idEvento" => $member->getIdEvento(),
-                    "mensaje" => $member->getMensaje(),
-                    "deletParticipante" => $member->getDeletParticipante()
+                    ];
+                }
 
-                ];
+                $result = $arrayMembers;
+            }else{
+                $result ="Evento no encontrado";
             }
 
-            $result = $arrayMembers;
         }else{
 
             $result = "Evento no encontrado" ;
