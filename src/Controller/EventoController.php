@@ -4,6 +4,7 @@ namespace App\Controller;
 header("Access-Control-Allow-Origin: *");
 use App\Entity\Eventos;
 use App\Entity\Pertenece;
+use App\Entity\Usuario;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -116,16 +117,20 @@ class EventoController extends Controller
                 ->findBy(['idEvento' => $request->query->get('id') , 'deletParticipante' => null]);
 
             foreach ($Members as $member) {
+                $user = $entityManager->getRepository(Usuario::class)
+                    ->findOneBy(['id' => $member->getIdUsuario(), 'deleteUser' => null]);
                 $arrayMembers[] = [
 
                     "id" => $member->getId(),
                     "idUsuario" => $member->getIdUsuario(),
+                    "nombreParticipante" => $user->getName(),
                     "idEvento" => $member->getIdEvento(),
                     "mensaje" => $member->getMensaje(),
                     "deletParticipante" => $member->getDeletParticipante()
 
                 ];
             }
+
             $result = $arrayMembers;
         }else{
 
