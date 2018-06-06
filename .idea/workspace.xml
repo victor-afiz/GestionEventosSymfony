@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="026c855b-bdc6-4935-92ff-2d034e074278" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/GestionEventosSymfony.iml" afterPath="$PROJECT_DIR$/.idea/GestionEventosSymfony.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/Controller/EventoController.php" afterPath="$PROJECT_DIR$/src/Controller/EventoController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UsuarioController.php" afterPath="$PROJECT_DIR$/src/Controller/UsuarioController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,15 +87,14 @@
       <file leaf-file-name="EventoController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+            <state relative-caret-position="288">
+              <caret line="110" column="31" lean-forward="true" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
               <folding>
                 <element signature="e#503#2557#0#PHP" expanded="false" />
-                <element signature="e#2563#4427#0#PHP" expanded="false" />
-                <element signature="e#4433#5756#0#PHP" expanded="false" />
-                <element signature="e#5762#7299#0#PHP" expanded="false" />
-                <element signature="e#8194#9122#0#PHP" expanded="false" />
-                <element signature="e#9128#9924#0#PHP" expanded="false" />
+                <element signature="e#4381#5704#0#PHP" expanded="false" />
+                <element signature="e#5710#7247#0#PHP" expanded="false" />
+                <element signature="e#8142#9070#0#PHP" expanded="false" />
+                <element signature="e#9076#9872#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -355,12 +350,12 @@
       <workItem from="1527618783842" duration="120000" />
       <workItem from="1527961591949" duration="4289000" />
       <workItem from="1528053381029" duration="8588000" />
-      <workItem from="1528266857372" duration="1753000" />
+      <workItem from="1528266857372" duration="2802000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63212000" />
+    <option name="totallyTimeSpent" value="64261000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -378,13 +373,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.50213444" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.49786553" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -441,11 +436,10 @@
           <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
           <folding>
             <element signature="e#503#2557#0#PHP" expanded="false" />
-            <element signature="e#2563#4427#0#PHP" expanded="false" />
-            <element signature="e#4433#5756#0#PHP" expanded="false" />
-            <element signature="e#5762#7299#0#PHP" expanded="false" />
-            <element signature="e#8194#9122#0#PHP" expanded="false" />
-            <element signature="e#9128#9924#0#PHP" expanded="false" />
+            <element signature="e#4381#5704#0#PHP" expanded="false" />
+            <element signature="e#5710#7247#0#PHP" expanded="false" />
+            <element signature="e#8142#9070#0#PHP" expanded="false" />
+            <element signature="e#9076#9872#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -781,15 +775,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+        <state relative-caret-position="288">
+          <caret line="110" column="31" lean-forward="true" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
           <folding>
             <element signature="e#503#2557#0#PHP" expanded="false" />
-            <element signature="e#2563#4427#0#PHP" expanded="false" />
-            <element signature="e#4433#5756#0#PHP" expanded="false" />
-            <element signature="e#5762#7299#0#PHP" expanded="false" />
-            <element signature="e#8194#9122#0#PHP" expanded="false" />
-            <element signature="e#9128#9924#0#PHP" expanded="false" />
+            <element signature="e#4381#5704#0#PHP" expanded="false" />
+            <element signature="e#5710#7247#0#PHP" expanded="false" />
+            <element signature="e#8142#9070#0#PHP" expanded="false" />
+            <element signature="e#9076#9872#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

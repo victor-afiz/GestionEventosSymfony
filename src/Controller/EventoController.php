@@ -108,11 +108,11 @@ class EventoController extends Controller
 
                     $result = $arrayManagers;
                 }else{
-                    $result = ["No Pertenece a ningun evento"];
+                    $result = [];
                 }
 
         }else{
-            $result = ["Parametro no enviado"];
+            $result = [];
         }
 
         return new JsonResponse($result);
