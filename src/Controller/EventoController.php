@@ -145,12 +145,12 @@ class EventoController extends Controller
 
                 $result = $arrayMembers;
             }else{
-                $result = ["No pertenece a ningun evento"];
+                $result = [];
             }
 
         }else{
 
-            $result = ["Parametro no enviado"] ;
+            $result = [] ;
         }
 
 
