@@ -61,7 +61,7 @@ class UsuarioController extends Controller
         if($user){
             return new JsonResponse([$user->getId(),$user->getName(),$user->getNickname()]);
         }else{
-            return new JsonResponse(["No Encontrado"]);
+            return new JsonResponse([]);
         }
     }
 

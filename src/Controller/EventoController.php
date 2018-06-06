@@ -70,12 +70,34 @@ class EventoController extends Controller
 
     }
 
+    public function countAllMemebers()
+    {
+        $entityManager = $this->getDoctrine()->getEntityManager();
+
+
+            $events = $entityManager->getRepository(Eventos::class)
+                ->findBy(['deleteEvent' => null]);
+
+        foreach ($events as $event){
+
+
+            $eventCount = $entityManager->getRepository(Pertenece::class)
+                ->findBy(['idEvento' =>  $event->getId(), 'deletParticipante' => null]);
+
+            $eventTotalMemebers = $entityManager->getRepository(Eventos::class)
+                ->findOneBy(['id' =>  $event->getId(), 'deleteEvent' => null]);
+
+            $eventTotalMemebers->setTotalMemebers(count($eventCount));
+            $entityManager->flush();
+
+        }
+    }
     public function getallEvent(Request $request)
     {
         $entityManager = $this->getDoctrine();
         $result = "";
         $userID = $request->query->get('id');
-
+        $this->countAllMemebers();
         if($userID){
 
             $Members = $entityManager->getRepository(Pertenece::class)
@@ -85,6 +107,7 @@ class EventoController extends Controller
                         $EventsId[] = [
                             'idEvento' => $member->getIdEvento()
                         ];
+
                     }
 
                     foreach ($EventsId as $eventid){
@@ -105,7 +128,6 @@ class EventoController extends Controller
                             ];
                         }
                     }
-
                     $result = $arrayManagers;
                 }else{
                     $result = [];
@@ -233,6 +255,33 @@ class EventoController extends Controller
             $result = "Participante no encontrado";
         }
 
+        return new JsonResponse($result);
+    }
+
+    public function setMemberMessageNull(Request $request)
+    {
+        $entityManager = $this->getDoctrine()->getEntityManager();
+        $result = "";
+        $userID = $request->query->get('idUser');
+        $eventID = $request->query->get('idEvent');
+
+        if($userID && $eventID) {
+
+            $user = $entityManager->getRepository(Pertenece::class)
+                ->findOneBy(['idUsuario' => $userID,'idEvento' => $eventID,'idEvento' => $eventID, 'deletParticipante' => null]);
+            if($user === null){
+                $result = "Participante no encontrado";
+            }else{
+
+                $user->setMensaje(null);
+                $entityManager->flush();
+
+                $result = "Mensaje Modificado";
+            }
+
+        }else{
+            $result = "Participante no encontrado";
+        }
         return new JsonResponse($result);
     }
 
