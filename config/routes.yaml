@@ -65,3 +65,8 @@ seteventmessege:
    path: /setEventMessage/
    controller: 'App\Controller\EventoController::setEventMessage'
    methods:  [GET]
+
+hashall:
+   path: /hashAll/
+   controller: 'App\Controller\EventoController::hashAll'
+   methods:  [GET]

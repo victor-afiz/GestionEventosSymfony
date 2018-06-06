@@ -15,22 +15,32 @@ class CheckUserController extends Controller
     private $result;
     public function login(Request $request)
     {
-        $this->result = '';
+
+        $result = '';
         $email = $request->query->get('email');
         $password = $request->query->get('password');
 
-        $repository = $this->getDoctrine()->getRepository(Usuario::class);
-        $user = $repository->findOneBy(['email' => $email]);
+        if ($email && $password){
 
-        if (false === $user) {
-            $this->result ='User not valid';
+            $repository = $this->getDoctrine()->getRepository(Usuario::class);
+            $user = $repository->findOneBy(['email' => $email]);
+
+            if (false === $user) {
+                $result ='User not valid';
+            }else{
+
+                $userEmail = $user->getEmail();
+                $userPassword = $user->getPassword();
+                $checkPassword = password_verify ( $password, $userPassword);
+
+                if($checkPassword && $userEmail === $email){
+                    $result =[$user->getName(), $user->getId()];
+                }
+            }
+
         }
 
-        if ($user->getEmail() === $email && $user->getPassword() === $password){
+        return new JsonResponse($result);
 
-          //  $this->result = 'Welcome ';
-            $this->result =[$user->getName(), $user->getId()];
-        }
-        return new JsonResponse($this->result);
     }
 }

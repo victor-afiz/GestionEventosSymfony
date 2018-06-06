@@ -5,6 +5,7 @@ header("Access-Control-Allow-Origin: *");
 
 
 //use http\Env\Request;
+use albertcolom\Assert\AssertEmail;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -15,6 +16,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
 
 use App\Entity\Usuario;
+use Webmozart\Assert\Assert;
 
 class UsuarioController extends Controller
 {
@@ -26,27 +28,46 @@ class UsuarioController extends Controller
     {
 
         $entityManager = $this->getDoctrine();
+        $name = $request->query->get('name');
+        $nickName = $request->query->get('nickName');
+        $email = $request->query->get('email');
+        $password = $request->query->get('password');
+        $result = "";
 
 
-        if (!empty($user)){
-            return new JsonResponse(['existe',$user->getName(),$user->getId()]);
+        if($name && $nickName && $email && $password){
+                    $user = $entityManager->getRepository(Usuario::class)
+            ->findOneBy(['email' => $request->query->get('email')]);
+            if (!empty($user)){
+                $result = ['existe',$user->getName(),$user->getId()];
+            }else{
+
+                if ($this->checkEmail($email)){
+                    $PasswordHash =password_hash($password, PASSWORD_DEFAULT);
+
+                    $usuario = new Usuario();
+                    $usuario->setName($name);
+                    $usuario->setNickname($nickName);
+                    $usuario->setEmail($email);
+                    $usuario->setPassword($PasswordHash);
+
+
+
+                    $entityManager->getManager()->persist($usuario);
+
+                    $entityManager->getManager()->flush();
+
+                    $this->sendEmail($usuario->getName(),$usuario->getNickname(),$usuario->getEmail(),$usuario->getPassword(), $mailer);
+
+                    $result = ['nuevo',$usuario->getName(),$usuario->getId()];
+                }else{
+                    $result = ["Introduzca un correo electrónico válida"];
+                }
+            }
         }else{
-
-            $usuario = new Usuario();
-            $usuario->setName($request->query->get('name'));
-            $usuario->setNickname($request->query->get('nickName'));
-            $usuario->setEmail($request->query->get('email'));
-            $usuario->setPassword($request->query->get('password'));
-
-            $entityManager->getManager()->persist($usuario);
-
-            $entityManager->getManager()->flush();
-
-            $this->sendEmail($usuario->getName(),$usuario->getNickname(),$usuario->getEmail(),$usuario->getPassword(), $mailer);
-
-            return new JsonResponse(['nuevo',$usuario->getName(),$usuario->getId()]);
+            $result = ["Asegurate de que has rellenado todos los campos"];
         }
-
+        return new JsonResponse($result);
     }
 
     public function findUser(Request $request)
@@ -138,5 +159,17 @@ class UsuarioController extends Controller
 
         return "" ;
     }
+
+    public function checkEmail($email) {
+        if ( strpos($email, '@') !== false ) {
+            $split = explode('@', $email);
+            return (strpos($split['1'], '.') !== false ? true : false);
+        }
+        else {
+            return false;
+        }
+    }
+
+
 
 }
