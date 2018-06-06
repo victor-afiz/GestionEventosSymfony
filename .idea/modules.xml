@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/GestionEventosSymfony.iml" filepath="$PROJECT_DIR$/.idea/GestionEventosSymfony.iml" />
       <module fileurl="file://$PROJECT_DIR$/../GestorDeEventos/.idea/GestorDeEventos.iml" filepath="$PROJECT_DIR$/../GestorDeEventos/.idea/GestorDeEventos.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../GestorDeEventos/.idea/GestorDeEventos.iml" filepath="$PROJECT_DIR$/../GestorDeEventos/.idea/GestorDeEventos.iml" />
     </modules>
   </component>
 </project>

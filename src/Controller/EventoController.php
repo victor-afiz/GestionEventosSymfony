@@ -73,36 +73,49 @@ class EventoController extends Controller
     public function getallEvent(Request $request)
     {
         $entityManager = $this->getDoctrine();
+        $result = "";
+        $userID = $request->query->get('id');
 
-        $Members = $entityManager->getRepository(Pertenece::class)
-            ->findBy(['idUsuario' => $request->query->get('id') , 'deletParticipante' => null]);
+        if($userID){
 
+            $Members = $entityManager->getRepository(Pertenece::class)
+                ->findBy(['idUsuario' => $userID , 'deletParticipante' => null]);
+                if($Members){
+                    foreach ($Members as $member){
+                        $EventsId[] = [
+                            'idEvento' => $member->getIdEvento()
+                        ];
+                    }
 
-        foreach ($Members as $member){
-            $EventsId[] = [
-                'idEvento' => $member->getIdEvento()
-            ];
+                    foreach ($EventsId as $eventid){
+
+                        $allYourEvents = $entityManager->getRepository(Eventos::class)
+                            ->findBy(['id' => $eventid['idEvento'] , 'deleteEvent' => null]);
+
+                        foreach ($allYourEvents as $yourEvents) {
+                            $arrayManagers[] = [
+                                "ID" => $yourEvents->getId(),
+                                "AdminID" => $yourEvents->getIdAdmin(),
+                                "Name" => $yourEvents->getNombreEvento(),
+                                "Description" => $yourEvents->getDescrripcion(),
+                                "Url" => $yourEvents->getEventImage(),
+                                "TotalMemebers" => $yourEvents->getTotalMemebers(),
+                                "Date" => $yourEvents->getDate(),
+                                "Message" => $yourEvents->getMessage()
+                            ];
+                        }
+                    }
+
+                    $result = $arrayManagers;
+                }else{
+                    $result = ["No Pertenece a ningun evento"];
+                }
+
+        }else{
+            $result = ["Parametro no enviado"];
         }
 
-        foreach ($EventsId as $eventid){
-
-            $allYourEvents = $entityManager->getRepository(Eventos::class)
-                ->findBy(['id' => $eventid['idEvento'] , 'deleteEvent' => null]);
-
-            foreach ($allYourEvents as $yourEvents) {
-                $arrayManagers[] = [
-                    "ID" => $yourEvents->getId(),
-                    "AdminID" => $yourEvents->getIdAdmin(),
-                    "Name" => $yourEvents->getNombreEvento(),
-                    "Description" => $yourEvents->getDescrripcion(),
-                    "Url" => $yourEvents->getEventImage(),
-                    "TotalMemebers" => $yourEvents->getTotalMemebers(),
-                    "Date" => $yourEvents->getDate(),
-                    "Message" => $yourEvents->getMessage()
-                ];
-            }
-        }
-        return new JsonResponse($arrayManagers);
+        return new JsonResponse($result);
     }
 
     function getAllMembers(Request $request)
@@ -110,8 +123,8 @@ class EventoController extends Controller
         $entityManager = $this->getDoctrine();
 
         $result = "";
-
-        if($request->query->get('id')){
+        $eventID = $request->query->get('id');
+        if($eventID){
             $Members = $entityManager->getRepository(Pertenece::class)
                 ->findBy(['idEvento' => $request->query->get('id') , 'deletParticipante' => null]);
             if($Members){
@@ -132,12 +145,12 @@ class EventoController extends Controller
 
                 $result = $arrayMembers;
             }else{
-                $result ="Evento no encontrado";
+                $result = ["No pertenece a ningun evento"];
             }
 
         }else{
 
-            $result = "Evento no encontrado" ;
+            $result = ["Parametro no enviado"] ;
         }
 
 
