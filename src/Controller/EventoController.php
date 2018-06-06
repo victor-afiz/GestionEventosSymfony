@@ -341,21 +341,4 @@ class EventoController extends Controller
         return new JsonResponse($result);
     }
 
-    public function hashAll()
-    {
-        $entityManager = $this->getDoctrine()->getEntityManager();
-
-
-        $users = $entityManager->getRepository(Usuario::class)
-            ->findBy(['deleteUser' => null]);
-        ;
-
-        foreach ($users as $user) {
-
-            $PasswordHash =password_hash($user->getPassword(), PASSWORD_DEFAULT);
-            $user->setPassword($PasswordHash);
-            $entityManager->flush();
-        }
-        die;
-    }
 }

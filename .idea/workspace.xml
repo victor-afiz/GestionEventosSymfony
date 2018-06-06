@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="026c855b-bdc6-4935-92ff-2d034e074278" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/GestionEventosSymfony.iml" afterPath="$PROJECT_DIR$/.idea/GestionEventosSymfony.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
       <change beforePath="$PROJECT_DIR$/config/routes.yaml" afterPath="$PROJECT_DIR$/config/routes.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CheckUserController.php" afterPath="$PROJECT_DIR$/src/Controller/CheckUserController.php" />
       <change beforePath="$PROJECT_DIR$/src/Controller/EventoController.php" afterPath="$PROJECT_DIR$/src/Controller/EventoController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UsuarioController.php" afterPath="$PROJECT_DIR$/src/Controller/UsuarioController.php" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" afterPath="$PROJECT_DIR$/symfony.lock" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,11 +66,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Eventos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Eventos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="177" column="36" lean-forward="false" selection-start-line="177" selection-start-column="20" selection-end-line="177" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="EventoController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="358" column="12" lean-forward="false" selection-start-line="358" selection-start-column="12" selection-end-line="358" selection-end-column="12" />
+            <state relative-caret-position="450">
+              <caret line="342" column="0" lean-forward="false" selection-start-line="342" selection-start-column="0" selection-end-line="342" selection-end-column="0" />
               <folding>
                 <element signature="e#503#2557#0#PHP" expanded="false" />
                 <element signature="e#2563#3281#0#PHP" expanded="false" />
@@ -94,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckUserController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CheckUserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/CheckUserController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="522">
@@ -104,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.yaml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/routes.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="778">
-              <caret line="70" column="56" lean-forward="false" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
+            <state relative-caret-position="742">
+              <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,8 +162,8 @@
         <option value="$PROJECT_DIR$/src/Entity/Eventos.php" />
         <option value="$PROJECT_DIR$/src/Controller/UsuarioController.php" />
         <option value="$PROJECT_DIR$/src/Controller/CheckUserController.php" />
-        <option value="$PROJECT_DIR$/config/routes.yaml" />
         <option value="$PROJECT_DIR$/src/Controller/EventoController.php" />
+        <option value="$PROJECT_DIR$/config/routes.yaml" />
       </list>
     </option>
   </component>
@@ -394,12 +396,12 @@
       <workItem from="1527618783842" duration="120000" />
       <workItem from="1527961591949" duration="4289000" />
       <workItem from="1528053381029" duration="8588000" />
-      <workItem from="1528266857372" duration="17739000" />
+      <workItem from="1528266857372" duration="17974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79198000" />
+    <option name="totallyTimeSpent" value="79433000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -766,14 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Eventos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="177" column="36" lean-forward="false" selection-start-line="177" selection-start-column="20" selection-end-line="177" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -804,32 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="778">
-          <caret line="70" column="56" lean-forward="false" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="358" column="12" lean-forward="false" selection-start-line="358" selection-start-column="12" selection-end-line="358" selection-end-column="12" />
-          <folding>
-            <element signature="e#503#2557#0#PHP" expanded="false" />
-            <element signature="e#2563#3281#0#PHP" expanded="false" />
-            <element signature="e#3286#5132#0#PHP" expanded="false" />
-            <element signature="e#5138#6409#0#PHP" expanded="false" />
-            <element signature="e#6415#7952#0#PHP" expanded="false" />
-            <element signature="e#7958#8841#0#PHP" expanded="false" />
-            <element signature="e#8847#9711#0#PHP" expanded="false" />
-            <element signature="e#9717#10645#0#PHP" expanded="false" />
-            <element signature="e#10651#11447#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Usuario.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
@@ -849,6 +817,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="342" column="0" lean-forward="false" selection-start-line="342" selection-start-column="0" selection-end-line="342" selection-end-column="0" />
+          <folding>
+            <element signature="e#503#2557#0#PHP" expanded="false" />
+            <element signature="e#2563#3281#0#PHP" expanded="false" />
+            <element signature="e#3286#5132#0#PHP" expanded="false" />
+            <element signature="e#5138#6409#0#PHP" expanded="false" />
+            <element signature="e#6415#7952#0#PHP" expanded="false" />
+            <element signature="e#7958#8841#0#PHP" expanded="false" />
+            <element signature="e#8847#9711#0#PHP" expanded="false" />
+            <element signature="e#9717#10645#0#PHP" expanded="false" />
+            <element signature="e#10651#11447#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Eventos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="177" column="36" lean-forward="false" selection-start-line="177" selection-start-column="20" selection-end-line="177" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>
