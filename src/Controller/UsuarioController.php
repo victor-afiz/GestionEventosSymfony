@@ -38,30 +38,37 @@ class UsuarioController extends Controller
         if($name && $nickName && $email && $password){
                     $user = $entityManager->getRepository(Usuario::class)
             ->findOneBy(['email' => $request->query->get('email')]);
-            if (!empty($user)){
+
+            $userNickname = $entityManager->getRepository(Usuario::class)
+                ->findOneBy(['nickname' => $nickName]);
+            if ($user){
                 $result = ['existe',$user->getName(),$user->getId()];
             }else{
-
-                if ($this->checkEmail($email)){
-                    $PasswordHash =password_hash($password, PASSWORD_DEFAULT);
-
-                    $usuario = new Usuario();
-                    $usuario->setName($name);
-                    $usuario->setNickname($nickName);
-                    $usuario->setEmail($email);
-                    $usuario->setPassword($PasswordHash);
-
-
-
-                    $entityManager->getManager()->persist($usuario);
-
-                    $entityManager->getManager()->flush();
-
-                    $this->sendEmail($usuario->getName(),$usuario->getNickname(),$usuario->getEmail(),$usuario->getPassword(), $mailer);
-
-                    $result = ['nuevo',$usuario->getName(),$usuario->getId()];
+                if($userNickname){
+                    $result = ["NickName introducido ya esta en uso"];
                 }else{
-                    $result = ["Introduzca un correo electrónico válida"];
+                    
+                    if ($this->checkEmail($email)){
+                        $PasswordHash =password_hash($password, PASSWORD_DEFAULT);
+
+                        $usuario = new Usuario();
+                        $usuario->setName($name);
+                        $usuario->setNickname($nickName);
+                        $usuario->setEmail($email);
+                        $usuario->setPassword($PasswordHash);
+
+
+
+                        $entityManager->getManager()->persist($usuario);
+
+                        $entityManager->getManager()->flush();
+
+                        $this->sendEmail($usuario->getName(),$usuario->getNickname(),$usuario->getEmail(),$usuario->getPassword(), $mailer);
+
+                        $result = ['nuevo',$usuario->getName(),$usuario->getId()];
+                    }else{
+                        $result = ["Introduzca un correo electrónico válida"];
+                    }
                 }
             }
         }else{

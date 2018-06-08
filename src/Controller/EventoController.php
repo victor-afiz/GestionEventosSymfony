@@ -352,10 +352,7 @@ class EventoController extends Controller
             $user = $entityManager->getRepository(Usuario::class)
                 ->findOneBy(['nickname' => $userNickname]);
 
-            if (!empty($user)){
-                $result = ['usuario no encontrado'];
-            }else{
-                $entityManager = $this->getDoctrine();
+            if ($user){$entityManager = $this->getDoctrine();
                 $pertenece = new Pertenece();
 
                 $pertenece->setIdUsuario($user->getId());
@@ -363,6 +360,10 @@ class EventoController extends Controller
                 $entityManager->getManager()->persist($pertenece);
                 $entityManager->getManager()->flush();
                 $result = ["Insertado"];
+
+
+            }else{
+                $result = ['usuario no encontrado'];
             }
 
         }else{
