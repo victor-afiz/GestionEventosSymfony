@@ -296,7 +296,7 @@ class EventoController extends Controller
         if($userID && $eventID && $messege) {
 
             $user = $entityManager->getRepository(Pertenece::class)
-                ->findOneBy(['idUsuario' => $userID,'idEvento' => $eventID,'idEvento' => $eventID, 'deletParticipante' => null]);
+                ->findOneBy(['idUsuario' => $userID,'idEvento' => $eventID, 'deletParticipante' => null]);
             if($user === null){
                 $result = "Participante no encontrado";
             }else{
@@ -353,15 +353,20 @@ class EventoController extends Controller
                 ->findOneBy(['nickname' => $userNickname]);
 
             if ($user){$entityManager = $this->getDoctrine();
-                $pertenece = new Pertenece();
 
-                $pertenece->setIdUsuario($user->getId());
-                $pertenece->setIdEvento($eventID);
-                $entityManager->getManager()->persist($pertenece);
-                $entityManager->getManager()->flush();
-                $result = ["Insertado"];
+                $member = $entityManager->getRepository(Pertenece::class)
+                    ->findOneBy(['idUsuario' => $user->getId(),'idEvento' => $eventID, 'deletParticipante' => null]);
+                if($member){
+                    $result = ["Este usuario ya pertenece a este evento"];
+                }else{
+                    $pertenece = new Pertenece();
 
-
+                    $pertenece->setIdUsuario($user->getId());
+                    $pertenece->setIdEvento($eventID);
+                    $entityManager->getManager()->persist($pertenece);
+                    $entityManager->getManager()->flush();
+                    $result = ["Insertado"];
+                }
             }else{
                 $result = ['usuario no encontrado'];
             }

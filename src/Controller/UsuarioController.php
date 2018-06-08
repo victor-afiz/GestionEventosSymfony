@@ -47,7 +47,7 @@ class UsuarioController extends Controller
                 if($userNickname){
                     $result = ["NickName introducido ya esta en uso"];
                 }else{
-                    
+
                     if ($this->checkEmail($email)){
                         $PasswordHash =password_hash($password, PASSWORD_DEFAULT);
 
