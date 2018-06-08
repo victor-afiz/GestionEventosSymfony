@@ -71,7 +71,7 @@
       <file leaf-file-name="EventoController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="-210">
               <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
             </state>
           </provider>
@@ -80,8 +80,8 @@
       <file leaf-file-name="CheckUserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/CheckUserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="47" />
+            <state relative-caret-position="250">
+              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -89,8 +89,8 @@
       <file leaf-file-name="login.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/login/login.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+            <state relative-caret-position="100">
+              <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -133,8 +133,8 @@
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.ts" />
         <option value="$PROJECT_DIR$/src/Controller/UsuarioController.php" />
         <option value="$PROJECT_DIR$/src/Controller/EventoController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/CheckUserController.php" />
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/login/login.ts" />
+        <option value="$PROJECT_DIR$/src/Controller/CheckUserController.php" />
       </list>
     </option>
   </component>
@@ -351,12 +351,12 @@
       <workItem from="1528439929075" duration="3215000" />
       <workItem from="1528482658430" duration="2680000" />
       <workItem from="1528488869981" duration="1478000" />
-      <workItem from="1528490933687" duration="1767000" />
+      <workItem from="1528490933687" duration="2201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88573000" />
+    <option name="totallyTimeSpent" value="89007000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -776,22 +776,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="-210">
           <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/CheckUserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="47" />
+        <state relative-caret-position="250">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/login/login.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+        <state relative-caret-position="100">
+          <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
         </state>
       </provider>
     </entry>

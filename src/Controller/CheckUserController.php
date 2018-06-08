@@ -33,11 +33,11 @@ class CheckUserController extends Controller
                 if($checkPassword && $userEmail === $email){
                     $result =[$user->getName(), $user->getId()];
                 }else{
-                    $result ='Contraseña o email incorecto';
+                    $result =[500];
                 }
 
             }else{
-                $result ='Usuario no encontrado';
+                $result =[501];
             }
 
         }
