@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="026c855b-bdc6-4935-92ff-2d034e074278" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/EventoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EventoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsuarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CheckUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CheckUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GestorDeEventos/src/pages/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorDeEventos/src/pages/login/login.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,15 +68,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EventoController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventoController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-              <folding>
-                <element signature="e#2563#3281#0#PHP" />
-                <element signature="e#5138#6476#0#PHP" />
-              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckUserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/CheckUserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/login/login.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -85,16 +98,8 @@
       <file leaf-file-name="UsuarioController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/UsuarioController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
+            <state relative-caret-position="1425">
               <caret line="95" column="44" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="44" />
-              <folding>
-                <element signature="e#670#2665#0#PHP" />
-                <element signature="e#2671#3126#0#PHP" />
-                <element signature="e#3132#3956#0#PHP" />
-                <element signature="e#3962#4620#0#PHP" />
-                <element signature="e#4626#5331#0#PHP" />
-                <element signature="e#5337#5602#0#PHP" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -110,7 +115,7 @@
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../GestorDeEventos" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -121,15 +126,15 @@
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/home/home.html" />
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/components/for-actividades/for-actividades.ts" />
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.html" />
-        <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/login/login.ts" />
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/home/home.ts" />
         <option value="$PROJECT_DIR$/src/Entity/Eventos.php" />
         <option value="$PROJECT_DIR$/config/routes.yaml" />
-        <option value="$PROJECT_DIR$/src/Controller/CheckUserController.php" />
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/users/users.ts" />
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/crear/crear.ts" />
         <option value="$PROJECT_DIR$/src/Controller/UsuarioController.php" />
         <option value="$PROJECT_DIR$/src/Controller/EventoController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/CheckUserController.php" />
+        <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/login/login.ts" />
       </list>
     </option>
   </component>
@@ -265,34 +270,25 @@
           <expand>
             <path>
               <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestionEventosSymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="GestorDeEventos" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestionEventosSymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestionEventosSymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestionEventosSymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="GestorDeEventos" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestionEventosSymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="GestorDeEventos" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="GestionEventosSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestionEventosSymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="GestorDeEventos" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="login" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -355,11 +351,12 @@
       <workItem from="1528439929075" duration="3215000" />
       <workItem from="1528482658430" duration="2680000" />
       <workItem from="1528488869981" duration="1478000" />
+      <workItem from="1528490933687" duration="1767000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86806000" />
+    <option name="totallyTimeSpent" value="88573000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -372,21 +369,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1360" height="738" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5030441" side_tool="true" visible="true" weight="0.32838285" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50380516" side_tool="true" weight="0.32838285" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Run" order="4" />
       <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Run" order="4" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49695587" visible="true" weight="0.32838285" />
-      <window_info anchor="bottom" id="TypeScript" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2564688" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49619484" visible="true" weight="0.32838285" />
+      <window_info anchor="bottom" id="TypeScript" order="13" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26027396" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32952815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -401,23 +399,23 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2526636" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Find" order="3" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49786553" weight="0.32934782" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50213444" side_tool="true" weight="0.32934782" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.32952815" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2526636" />
+      <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,6 +456,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Controller/UsuarioController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="95" column="44" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Eventos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -668,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/login/login.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/home/home.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-274">
@@ -734,9 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/uno/uno.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/uno/uno.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -755,9 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -775,25 +767,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CheckUserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/UsuarioController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="1425">
           <caret line="95" column="44" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="44" />
-          <folding>
-            <element signature="e#670#2665#0#PHP" />
-            <element signature="e#2671#3126#0#PHP" />
-            <element signature="e#3132#3956#0#PHP" />
-            <element signature="e#3962#4620#0#PHP" />
-            <element signature="e#4626#5331#0#PHP" />
-            <element signature="e#5337#5602#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -801,10 +778,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <folding>
-            <element signature="e#2563#3281#0#PHP" />
-            <element signature="e#5138#6476#0#PHP" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CheckUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/pages/login/login.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
         </state>
       </provider>
     </entry>
