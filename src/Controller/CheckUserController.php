@@ -23,12 +23,9 @@ class CheckUserController extends Controller
         if ($email && $password){
 
             $repository = $this->getDoctrine()->getRepository(Usuario::class);
-            $user = $repository->findOneBy(['email' => $email]);
+            $user = $repository->findOneBy(['email' => $email,  'deleteUser' => null]);
 
-            if (false === $user) {
-                $result ='User not valid';
-            }else{
-
+            if ($user) {
                 $userEmail = $user->getEmail();
                 $userPassword = $user->getPassword();
                 $checkPassword = password_verify ( $password, $userPassword);
@@ -36,6 +33,9 @@ class CheckUserController extends Controller
                 if($checkPassword && $userEmail === $email){
                     $result =[$user->getName(), $user->getId()];
                 }
+
+            }else{
+                $result ='User not valid';
             }
 
         }

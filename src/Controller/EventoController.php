@@ -148,23 +148,24 @@ class EventoController extends Controller
         $eventID = $request->query->get('id');
         if($eventID){
             $Members = $entityManager->getRepository(Pertenece::class)
-                ->findBy(['idEvento' => $request->query->get('id') , 'deletParticipante' => null]);
+                ->findBy(['idEvento' => $eventID , 'deletParticipante' => null]);
+
             if($Members){
                 foreach ($Members as $member) {
                     $user = $entityManager->getRepository(Usuario::class)
                         ->findOneBy(['id' => $member->getIdUsuario(), 'deleteUser' => null]);
-                    $arrayMembers[] = [
+                    if ($user){
+                        $arrayMembers[] = [
+                            "id" => $member->getId(),
+                            "idUsuario" => $member->getIdUsuario(),
+                            "nombreParticipante" => $user->getName(),
+                            "idEvento" => $member->getIdEvento(),
+                            "mensaje" => $member->getMensaje(),
+                            "deletParticipante" => $member->getDeletParticipante()
 
-                        "id" => $member->getId(),
-                        "idUsuario" => $member->getIdUsuario(),
-                        "nombreParticipante" => $user->getName(),
-                        "idEvento" => $member->getIdEvento(),
-                        "mensaje" => $member->getMensaje(),
-                        "deletParticipante" => $member->getDeletParticipante()
-
-                    ];
+                        ];
+                    }
                 }
-
                 $result = $arrayMembers;
             }else{
                 $result = [];
