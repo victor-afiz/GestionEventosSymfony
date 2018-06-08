@@ -341,4 +341,28 @@ class EventoController extends Controller
         return new JsonResponse($result);
     }
 
+    public function insertInToEvent(Request $request)
+    {
+        $result = "";
+        $userID = $request->query->get('idUser');
+        $eventID = $request->query->get('idEvent');
+
+        if($userID && $eventID){
+            $entityManager = $this->getDoctrine();
+            $pertenece = new Pertenece();
+
+            $pertenece->setIdUsuario($userID);
+            $pertenece->setIdEvento($eventID);
+            $entityManager->getManager()->persist($pertenece);
+            $entityManager->getManager()->flush();
+            $result = ["creado"];
+        }else{
+            $result = ["Envie todos los parametros"];
+        }
+
+
+        return new JsonResponse($result);
+    }
+
+
 }

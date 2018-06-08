@@ -66,3 +66,8 @@ seteventmessege:
    controller: 'App\Controller\EventoController::setEventMessage'
    methods:  [GET]
 
+insertintoevent:
+   path: /insertInToEvent/
+   controller: 'App\Controller\EventoController::insertInToEvent'
+   methods:  [GET]
+
