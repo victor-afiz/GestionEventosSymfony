@@ -28,10 +28,6 @@ class EventoController extends Controller
         $eventAllMembers = $request->query->get('allUSer');
 
         if ($adminID && $evetName && $eventDescription && $eventUrl && $eventTotalPrice && $eventDate && $eventAllMembers){
-
-        }else{
-
-        }
             $evento = new Eventos();
             $evento->setIdAdmin($adminID);
             $evento->setNombreEvento($evetName);
@@ -50,11 +46,11 @@ class EventoController extends Controller
 
             $pertenece = new Pertenece();
 
-                $pertenece->setIdUsuario($evento->getIdAdmin());
-                $pertenece->setIdEvento($evento->getId());
-                $entityManager->getManager()->persist($pertenece);
-                $entityManager->getManager()->flush();
-                $entityManager->getManager()->clear();
+            $pertenece->setIdUsuario($evento->getIdAdmin());
+            $pertenece->setIdEvento($evento->getId());
+            $entityManager->getManager()->persist($pertenece);
+            $entityManager->getManager()->flush();
+            $entityManager->getManager()->clear();
 
             foreach ($convertAllMembers as $kye){
 
@@ -65,8 +61,12 @@ class EventoController extends Controller
                 $entityManager->getManager()->clear();
 
             }
+            $result = ['creado'];
+        }else{
+            $result = ['Envie todos los parametros'];
+        }
 
-            return new JsonResponse(['creado']);
+        return new JsonResponse($result);
 
     }
 

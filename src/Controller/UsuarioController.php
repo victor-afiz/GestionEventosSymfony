@@ -96,7 +96,7 @@ class UsuarioController extends Controller
     public function getAll(Request $request)
     {
         $entityManager = $this->getDoctrine();
-
+        $result = "";
         $Users =  $entityManager
             ->getEntityManager()
             ->createQueryBuilder()
@@ -107,17 +107,24 @@ class UsuarioController extends Controller
             ->getQuery()
             ->execute();
 
-        $arrayUser = [];
-        foreach ($Users as $user){
-            $arrayUser[] = [
-                "id" => $user->getId(),
-                "name" => $user->getName(),
-                "nick_name" => $user->getNickname(),
-                "email" => $user->getEmail(),
-                "password" => $user->getPassword()
-            ];
+        if($Users){
+            $arrayUser = [];
+            foreach ($Users as $user){
+                $arrayUser[] = [
+                    "id" => $user->getId(),
+                    "name" => $user->getName(),
+                    "nick_name" => $user->getNickname(),
+                    "email" => $user->getEmail(),
+                    "password" => $user->getPassword()
+                ];
+            }
+            $result = $arrayUser;
+        }else{
+            $result = [];
         }
-        return new JsonResponse($arrayUser);
+
+
+        return new JsonResponse($result);
     }
 
     public function deleteUser(Request $request)
