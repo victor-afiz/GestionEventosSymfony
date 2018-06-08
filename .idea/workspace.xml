@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="026c855b-bdc6-4935-92ff-2d034e074278" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/GestionEventosSymfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GestionEventosSymfony.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/EventoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EventoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsuarioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GestorDeEventos/src/pages/uno/uno.html" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorDeEventos/src/pages/uno/uno.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GestorDeEventos/src/pages/uno/uno.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorDeEventos/src/pages/uno/uno.ts" afterDir="false" />
     </list>
@@ -63,8 +60,8 @@
       <file leaf-file-name="EventoController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="359" column="50" selection-start-line="359" selection-start-column="50" selection-end-line="359" selection-end-column="50" />
+            <state relative-caret-position="405">
+              <caret line="364" column="37" selection-start-line="364" selection-start-column="37" selection-end-line="364" selection-end-column="37" />
               <folding>
                 <element signature="e#2563#3281#0#PHP" />
                 <element signature="e#3286#5132#0#PHP" />
@@ -78,29 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pertenece" pinned="false" current-in-tab="false">
-        <entry file="das://bb7efb02-7c12-46e4-8bb5-467791f81e17/schema/GestionEv/table/pertenece">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="eventos" pinned="false" current-in-tab="false">
-        <entry file="das://bb7efb02-7c12-46e4-8bb5-467791f81e17/schema/GestionEv/table/eventos">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usuario" pinned="false" current-in-tab="false">
-        <entry file="das://bb7efb02-7c12-46e4-8bb5-467791f81e17/schema/GestionEv/table/usuario">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="UsuarioController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/UsuarioController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="42" column="18" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="42" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -365,12 +344,12 @@
       <workItem from="1527961591949" duration="4289000" />
       <workItem from="1528053381029" duration="8588000" />
       <workItem from="1528266857372" duration="17974000" />
-      <workItem from="1528439929075" duration="1437000" />
+      <workItem from="1528439929075" duration="1964000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80870000" />
+    <option name="totallyTimeSpent" value="81397000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -392,10 +371,9 @@
       <window_info anchor="bottom" id="Run" order="4" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49786553" weight="0.32934782" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32838285" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2526636" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2526636" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.32952815" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32952815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
@@ -405,16 +383,17 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32838285" />
       <window_info anchor="bottom" id="Find" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Database Console" order="0" visible="true" weight="0.32838285" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32838285" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2526636" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2526636" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="12" />
@@ -747,31 +726,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Usuario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="111" column="31" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/UsuarioController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="78" column="34" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://bb7efb02-7c12-46e4-8bb5-467791f81e17/schema/GestionEv/table/usuario">
+    <entry file="das://bb7efb02-7c12-46e4-8bb5-467791f81e17/schema/GestionEv/table/pertenece">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="69" column="25" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -782,17 +740,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://bb7efb02-7c12-46e4-8bb5-467791f81e17/schema/GestionEv/table/pertenece">
+    <entry file="das://bb7efb02-7c12-46e4-8bb5-467791f81e17/schema/GestionEv/table/usuario">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/UsuarioController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="42" column="18" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="42" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Usuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="69" column="25" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="359" column="50" selection-start-line="359" selection-start-column="50" selection-end-line="359" selection-end-column="50" />
+        <state relative-caret-position="405">
+          <caret line="364" column="37" selection-start-line="364" selection-start-column="37" selection-end-line="364" selection-end-column="37" />
           <folding>
             <element signature="e#2563#3281#0#PHP" />
             <element signature="e#3286#5132#0#PHP" />

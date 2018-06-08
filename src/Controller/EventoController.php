@@ -343,19 +343,28 @@ class EventoController extends Controller
 
     public function insertInToEvent(Request $request)
     {
+        $entityManager= $this->getDoctrine();
         $result = "";
-        $userID = $request->query->get('idUser');
+        $userNickname = $request->query->get('nickname');
         $eventID = $request->query->get('idEvent');
 
-        if($userID && $eventID){
-            $entityManager = $this->getDoctrine();
-            $pertenece = new Pertenece();
+        if($userNickname && $eventID){
+            $user = $entityManager->getRepository(Usuario::class)
+                ->findOneBy(['nickname' => $userNickname]);
 
-            $pertenece->setIdUsuario($userID);
-            $pertenece->setIdEvento($eventID);
-            $entityManager->getManager()->persist($pertenece);
-            $entityManager->getManager()->flush();
-            $result = ["creado"];
+            if (!empty($user)){
+                $result = ['usuario no encontrado'];
+            }else{
+                $entityManager = $this->getDoctrine();
+                $pertenece = new Pertenece();
+
+                $pertenece->setIdUsuario($user->getId());
+                $pertenece->setIdEvento($eventID);
+                $entityManager->getManager()->persist($pertenece);
+                $entityManager->getManager()->flush();
+                $result = ["Insertado"];
+            }
+
         }else{
             $result = ["Envie todos los parametros"];
         }
