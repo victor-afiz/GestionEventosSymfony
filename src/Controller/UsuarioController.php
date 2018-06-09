@@ -6,6 +6,7 @@ header("Access-Control-Allow-Origin: *");
 
 //use http\Env\Request;
 use albertcolom\Assert\AssertEmail;
+use App\Entity\Pertenece;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -95,34 +96,40 @@ class UsuarioController extends Controller
 
     public function getAll(Request $request)
     {
+        $userID = $request->query->get('id');
         $entityManager = $this->getDoctrine();
         $result = "";
-        $Users =  $entityManager
-            ->getEntityManager()
-            ->createQueryBuilder()
-            ->select('usuario')
-            ->from('App:Usuario', 'usuario')
-            ->where('usuario.id != :id')
-            ->setParameter('id', $request->query->get('id'))
-            ->getQuery()
-            ->execute();
 
-        if($Users){
-            $arrayUser = [];
-            foreach ($Users as $user){
-                $arrayUser[] = [
-                    "id" => $user->getId(),
-                    "name" => $user->getName(),
-                    "nick_name" => $user->getNickname(),
-                    "email" => $user->getEmail(),
-                    "password" => $user->getPassword()
-                ];
+
+        if ($userID){
+            $Users = $entityManager->getRepository(Usuario::class)
+                ->findBy(['deleteUser' => null]);
+
+            if($Users){
+
+                $arrayUser = [];
+                foreach ($Users as $user){
+                    if ($user->getId() == $userID){
+
+                    }else{
+
+                        $arrayUser[] = [
+                            "id" => $user->getId(),
+                            "name" => $user->getName(),
+                            "nick_name" => $user->getNickname(),
+                            "email" => $user->getEmail(),
+                            "password" => $user->getPassword()
+                        ];
+                    }
+
+                }
+                $result = $arrayUser;
+            }else{
+                $result = [];
             }
-            $result = $arrayUser;
         }else{
             $result = [];
         }
-
 
         return new JsonResponse($result);
     }
@@ -130,20 +137,29 @@ class UsuarioController extends Controller
     public function deleteUser(Request $request)
     {
         $result = "";
+        $entityManager = $this->getDoctrine()->getEntityManager();
+        $userID = $request->query->get('id');
 
-        if($request->query->get('id')) {
-            $em = $this->getDoctrine()->getEntityManager();
-            $user = $em->getRepository(Usuario::class)->findOneBy(['id' => $request->query->get('id'), 'deleteUser' => null]);
+        if($userID) {
+
+            $user = $entityManager->getRepository(Usuario::class)->findOneBy(['id' => $userID, 'deleteUser' => null]);
             if($user === null){
                 $result = "Usuario no encontrado";
             }else{
 
                 $user->setDeleteUser(0);
-                $em->flush();
+                $entityManager->flush();
+
+                $Members = $entityManager->getRepository(Pertenece::class)->findBy(['idUsuario' => $userID , 'deletParticipante' => null]);
+
+                foreach ($Members as $member){
+
+                    $member->setDeletParticipante(0);
+                    $entityManager->flush();
+                }
 
                 $result = "Usuario eliminado";
             }
-
         }else{
             $result = "Usuario no encontrado";
         }
