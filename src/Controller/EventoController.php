@@ -351,7 +351,7 @@ class EventoController extends Controller
 
         if($userNickname && $eventID){
             $user = $entityManager->getRepository(Usuario::class)
-                ->findOneBy(['nickname' => $userNickname]);
+                ->findOneBy(['nickname' => $userNickname, 'deleteUser' => null]);
 
             if ($user){$entityManager = $this->getDoctrine();
 
