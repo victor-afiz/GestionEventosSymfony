@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="026c855b-bdc6-4935-92ff-2d034e074278" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/EventoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EventoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsuarioController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UsuarioController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UsuarioController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/UsuarioController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2235">
-              <caret line="161" column="13" selection-start-line="161" selection-start-column="13" selection-end-line="161" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="66" column="115" selection-start-line="66" selection-start-column="115" selection-end-line="66" selection-end-column="115" />
             </state>
           </provider>
         </entry>
@@ -103,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventoController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventoController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="353" column="56" lean-forward="true" selection-start-line="353" selection-start-column="56" selection-end-line="353" selection-end-column="56" />
+            <state relative-caret-position="101">
+              <caret line="344" column="28" lean-forward="true" selection-start-line="344" selection-start-column="20" selection-end-line="344" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -152,9 +152,9 @@
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/salir/salir.ts" />
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/pages/login/login.ts" />
         <option value="$PROJECT_DIR$/config/routes.yaml" />
-        <option value="$PROJECT_DIR$/src/Controller/UsuarioController.php" />
         <option value="$PROJECT_DIR$/../GestorDeEventos/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/src/Controller/EventoController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/UsuarioController.php" />
       </list>
     </option>
   </component>
@@ -367,12 +367,12 @@
       <workItem from="1528490933687" duration="4202000" />
       <workItem from="1528530322238" duration="3664000" />
       <workItem from="1528563187424" duration="3097000" />
-      <workItem from="1528700946555" duration="154000" />
+      <workItem from="1528700946555" duration="343000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97923000" />
+    <option name="totallyTimeSpent" value="98112000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -783,13 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/UsuarioController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2235">
-          <caret line="161" column="13" selection-start-line="161" selection-start-column="13" selection-end-line="161" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../GestorDeEventos/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -799,8 +792,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/EventoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="353" column="56" lean-forward="true" selection-start-line="353" selection-start-column="56" selection-end-line="353" selection-end-column="56" />
+        <state relative-caret-position="101">
+          <caret line="344" column="28" lean-forward="true" selection-start-line="344" selection-start-column="20" selection-end-line="344" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/UsuarioController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="66" column="115" selection-start-line="66" selection-start-column="115" selection-end-line="66" selection-end-column="115" />
         </state>
       </provider>
     </entry>

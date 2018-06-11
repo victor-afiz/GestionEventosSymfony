@@ -64,7 +64,7 @@ class UsuarioController extends Controller
 
                         $entityManager->getManager()->flush();
 
-                        $this->sendEmail($usuario->getName(),$usuario->getNickname(),$usuario->getEmail(),$usuario->getPassword(), $mailer);
+                        $this->sendEmail($usuario->getName(),$usuario->getNickname(),$usuario->getEmail(),$password, $mailer);
 
                         $result = ['nuevo',$usuario->getName(),$usuario->getId()];
                     }else{
